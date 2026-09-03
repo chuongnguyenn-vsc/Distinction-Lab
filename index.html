@@ -11,17 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F4F4F2;
-    --paper-dim:#E8E8E6;
-    --ink:#111111;
-    --ink-soft:#3D3D3D;
-    --green:#1A1A1A;
-    --green-deep:#000000;
-    --amber:#8A8A8E;
-    --slate:#5C5C5E;
-    --blue:#54545A;
-    --line: rgba(0,0,0,0.14);
-    --line-soft: rgba(0,0,0,0.08);
+    --paper:#F0F2ED;
+    --paper-dim:#E7EAE2;
+    --ink:#11181A;
+    --ink-soft:#3C4749;
+    --green:#1F6B4D;
+    --green-deep:#153F30;
+    --amber:#D98E3F;
+    --slate:#4A5A5C;
+    --blue:#2C4A6E;
+    --line: rgba(17,24,26,0.14);
+    --line-soft: rgba(17,24,26,0.08);
     --radius: 2px;
     --wrap: 1180px;
   }
@@ -31,7 +31,7 @@
     margin:0;
     background-color:var(--paper);
     background-image:
-      radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+      radial-gradient(rgba(17,24,26,0.05) 1px, transparent 1px);
     background-size: 24px 24px;
     color:var(--ink);
     font-family:'IBM Plex Sans', sans-serif;
@@ -65,8 +65,8 @@
     gap:9px;
     margin-bottom:18px;
     padding:6px 13px 6px 10px;
-    background:rgba(0,0,0,.08);
-    border:1px solid rgba(0,0,0,.3);
+    background:rgba(31,107,77,.08);
+    border:1px solid rgba(31,107,77,.3);
     width:fit-content;
   }
   .eyebrow::before{
@@ -143,9 +143,7 @@
   }
   .btn.ghost:hover{ border-color:var(--ink); background:transparent; }
   .btn.on-dark{ background:var(--green); border-color:var(--green); color:#fff; }
-  .btn.on-dark:hover{ background:#2E2E2E; border-color:#2E2E2E; }
-  .cta-banner .btn.on-dark{ background:#fff; border-color:#fff; color:#000; }
-  .cta-banner .btn.on-dark:hover{ background:#E4E4E2; border-color:#E4E4E2; }
+  .btn.on-dark:hover{ background:#268a63; border-color:#268a63; }
   .nav-cta{ display:flex; gap:10px; }
   .nav-toggle{ display:none; }
 
@@ -220,7 +218,7 @@
   .console-doc{
     position:relative;
     padding:0 26px 28px;
-    background:#FBFBFA;
+    background:#FBFBF8;
     border-bottom:1px solid var(--line);
   }
   .doc-filebar{
@@ -233,7 +231,7 @@
     letter-spacing:.04em;
     color:var(--slate);
   }
-  .doc-filebar .pg{ color:#8F8F8D; }
+  .doc-filebar .pg{ color:#8A9490; }
   .doc-box{
     position:relative;
     border:1.5px solid var(--ink-soft);
@@ -273,7 +271,7 @@
 
   .doc-entity{
     display:inline;
-    background:rgba(0,0,0,.13);
+    background:rgba(31,107,77,.13);
     border-bottom:1.5px solid var(--green);
     padding:0 3px;
     color:var(--green-deep);
@@ -282,8 +280,8 @@
   .doc-pair{ display:grid; grid-template-columns:1.1fr 1fr; gap:18px; margin-top:24px; align-items:stretch; }
   .doc-pair .doc-box{ margin-top:0; }
   @media (max-width:460px){ .doc-pair{ grid-template-columns:1fr; gap:30px; } }
-  .doc-box.pref-box{ border-color:var(--green); background:rgba(0,0,0,.06); }
-  .doc-box.flag-box{ border-color:var(--amber); background:rgba(0,0,0,.07); }
+  .doc-box.pref-box{ border-color:var(--green); background:rgba(31,107,77,.06); }
+  .doc-box.flag-box{ border-color:var(--amber); background:rgba(217,142,63,.07); }
   .doc-chart{
     display:flex; align-items:flex-end; gap:7px;
     height:64px;
@@ -291,7 +289,7 @@
   }
   .doc-chart span{
     flex:1;
-    background:linear-gradient(180deg, var(--green) 0%, #FFFFFF 100%);
+    background:linear-gradient(180deg, var(--green) 0%, #5CD6A3 100%);
     opacity:.8;
   }
   .doc-table{ width:100%; border-collapse:collapse; font-size:13px; }
@@ -315,31 +313,31 @@
   /* -- middle: dark results panel -- */
   .console{
     background:var(--ink);
-    color:#E4E4E2;
+    color:#DDE3DD;
     position:relative;
   }
   .console-head{
     display:flex; align-items:baseline; justify-content:space-between;
     padding:20px 22px 18px;
-    border-bottom:1px solid #2A2A2A;
+    border-bottom:1px solid #232E30;
   }
   .console-head .eng{
     font-family:'IBM Plex Mono', monospace;
     font-size:12px;
-    color:#9A9A98;
+    color:#8FA09B;
     letter-spacing:.04em;
     display:flex; align-items:center; gap:10px;
   }
   .console-head .dots{ display:inline-flex; gap:5px; }
-  .console-head .dots i{ width:8px; height:8px; border-radius:50%; background:#3A3A3A; display:inline-block; font-style:normal; }
-  .console-head .eng b{ color:#E4E4E2; font-weight:600; }
+  .console-head .dots i{ width:8px; height:8px; border-radius:50%; background:#33403F; display:inline-block; font-style:normal; }
+  .console-head .eng b{ color:#DDE3DD; font-weight:600; }
   .console-head .metric{ text-align:right; }
   .console-head .metric .lbl{
     display:block;
     font-family:'IBM Plex Mono', monospace;
     font-size:10.5px;
     letter-spacing:.12em;
-    color:#9A9A98;
+    color:#8FA09B;
     margin-bottom:2px;
   }
   .console-head .metric .num{
@@ -355,7 +353,7 @@
     align-items:center;
     gap:14px;
     padding:13px 0;
-    border-bottom:1px dashed #242424;
+    border-bottom:1px dashed #202A2C;
     font-family:'IBM Plex Mono', monospace;
     font-size:13px;
     opacity:0;
@@ -363,32 +361,32 @@
     transition:opacity .5s ease, transform .5s ease;
   }
   .c-row.show{ opacity:1; transform:translateY(0); }
-  .c-row .idx{ color:#5A5A5A; }
+  .c-row .idx{ color:#546260; }
   .c-row .cat{ font-weight:600; letter-spacing:.02em; }
-  .c-row .cat.grey{ color:#A8A8A6; }
+  .c-row .cat.grey{ color:#9FB0AC; }
   .c-row .cat.green{ color:#5CD6A3; }
   .c-row .cat.amber{ color:#E3A863; }
-  .c-row .desc{ color:#BFBFBD; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  .c-row .score{ text-align:right; color:#5A5A5A; }
-  .c-row.show .score{ color:#E4E4E2; }
+  .c-row .desc{ color:#B7C0BC; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .c-row .score{ text-align:right; color:#546260; }
+  .c-row.show .score{ color:#DDE3DD; }
   .c-more{
     padding:12px 22px 14px;
     font-family:'IBM Plex Mono', monospace;
     font-size:11.5px;
-    color:#5A5A5A;
-    border-bottom:1px solid #2A2A2A;
+    color:#546260;
+    border-bottom:1px solid #232E30;
   }
   .console-foot{
     padding:14px 22px;
     font-family:'IBM Plex Mono', monospace;
     font-size:10.5px;
     letter-spacing:.06em;
-    color:#5A5A5A;
+    color:#546260;
   }
 
   /* -- bottom: carousel strip -- */
   .console-carousel{
-    background:#0F0F0F;
+    background:#0C1214;
     padding:12px 16px 14px;
   }
   .cc-thumbs{ display:flex; gap:6px; margin-bottom:10px; }
@@ -398,18 +396,18 @@
     padding:6px 0;
     font-family:'IBM Plex Mono', monospace;
     font-size:10.5px;
-    color:#5A5A5A;
-    background:#1C1C1C;
-    border:1px solid #2A2A2A;
+    color:#546260;
+    background:#161E20;
+    border:1px solid #232E30;
   }
   .cc-thumbs span.active{ background:var(--green); color:#fff; border-color:var(--green); }
   .cc-summary{
     font-family:'IBM Plex Mono', monospace;
     font-size:11px;
-    color:#9A9A98;
+    color:#8FA09B;
     letter-spacing:.02em;
   }
-  .cc-summary b{ color:#E4E4E2; }
+  .cc-summary b{ color:#DDE3DD; }
 
   /* ---------- STAT STRIP ---------- */
   .strip{
@@ -487,8 +485,8 @@
     font-weight:600;
     letter-spacing:.06em;
     color:var(--green-deep);
-    background:rgba(0,0,0,.08);
-    border:1px solid rgba(0,0,0,.28);
+    background:rgba(31,107,77,.08);
+    border:1px solid rgba(31,107,77,.28);
     padding:4px 9px;
     display:inline-block;
     margin-bottom:20px;
@@ -528,7 +526,7 @@
     align-items:flex-start;
     gap:16px;
   }
-  .p-row .p-label .iso-icon{ flex:none; width:44px; height:auto; margin-top:2px; filter:drop-shadow(0 4px 6px rgba(0,0,0,.18)); }
+  .p-row .p-label .iso-icon{ flex:none; width:44px; height:auto; margin-top:2px; filter:drop-shadow(0 4px 6px rgba(17,24,26,.18)); }
   .p-row .p-label .stage{
     display:block;
     font-family:'Instrument Serif', serif;
@@ -548,7 +546,7 @@
     padding:4px 10px;
     border:1px solid var(--green);
     color:var(--green-deep);
-    background:rgba(0,0,0,.08);
+    background:rgba(31,107,77,.08);
     margin-top:10px;
   }
 
@@ -624,7 +622,7 @@
     font-weight:600;
     letter-spacing:.14em;
     text-transform:uppercase;
-    color:#E4E4E2;
+    color:#DDE3DD;
     margin-bottom:18px;
     display:inline-flex;
     align-items:center;
@@ -640,7 +638,7 @@
     background:#FFFFFF;
     flex:none;
   }
-  .vm-cell:last-child .eyebrow2{ color:#F0F0EF; }
+  .vm-cell:last-child .eyebrow2{ color:#EAF6EF; }
   .vm-cell p.big{
     font-family:'Instrument Serif', serif;
     font-size:26px;
@@ -664,7 +662,7 @@
   .avatar{
     width:100%;
     aspect-ratio:1;
-    background:#DDDDD9;
+    background:#DEDED9;
     position:relative;
     margin-bottom:18px;
     overflow:hidden;
@@ -739,8 +737,8 @@
     margin:0 auto;
     line-height:1.1;
   }
-  .cta-banner h2 em{ color:#FFFFFF; font-style:italic; }
-  .cta-banner p{ color:#A8A8A6; margin-top:18px; font-size:16px; }
+  .cta-banner h2 em{ color:#5CD6A3; font-style:italic; }
+  .cta-banner p{ color:#9FB0AC; margin-top:18px; font-size:16px; }
   .cta-banner .hero-cta{ justify-content:center; margin-top:32px; }
 
   /* FOOTER */
@@ -813,14 +811,14 @@
   <!-- HERO -->
   <section class="hero" style="padding-top:88px;">
     <svg class="hero-bg-deco" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="none" stroke="#111111" stroke-width="1">
+      <g fill="none" stroke="#11181A" stroke-width="1">
         <circle cx="700" cy="120" r="60" opacity="0.06"/>
         <circle cx="700" cy="120" r="110" opacity="0.05"/>
         <circle cx="700" cy="120" r="160" opacity="0.04"/>
         <line x1="700" y1="60" x2="700" y2="180" opacity="0.06"/>
         <line x1="640" y1="120" x2="760" y2="120" opacity="0.06"/>
       </g>
-      <g fill="#1A1A1A">
+      <g fill="#1F6B4D">
         <circle cx="700" cy="60" r="3.5" opacity="0.35"/>
         <circle cx="760" cy="120" r="3" opacity="0.3"/>
         <circle cx="700" cy="180" r="3" opacity="0.3"/>
@@ -915,9 +913,9 @@
         <div class="p-row trial">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#F0F0EF"/>
-              <polygon points="0,16 32,32 32,74 0,58" fill="#FFFFFF"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#000000"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#EAF6EF"/>
+              <polygon points="0,16 32,32 32,74 0,58" fill="#5CD6A3"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#153F30"/>
             </svg>
             <span>Step 0 — Free
             <span class="stage">Calibration Trial</span></span>
@@ -931,9 +929,9 @@
         <div class="p-row">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#F4F4F2"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#F0F2ED"/>
               <polygon points="0,16 32,32 32,74 0,58" fill="#B9C4C0"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#3D3D3D"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#3C4749"/>
             </svg>
             <span>Step 1
             <span class="stage">Schema & Pod Setup</span></span>
@@ -944,9 +942,9 @@
         <div class="p-row">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#F4F4F2"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#F0F2ED"/>
               <polygon points="0,16 32,32 32,74 0,58" fill="#B9C4C0"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#3D3D3D"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#3C4749"/>
             </svg>
             <span>Step 2
             <span class="stage">Dual-Annotator Pass</span></span>
@@ -957,9 +955,9 @@
         <div class="p-row">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#F4F4F2"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#F0F2ED"/>
               <polygon points="0,16 32,32 32,74 0,58" fill="#B9C4C0"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#3D3D3D"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#3C4749"/>
             </svg>
             <span>Step 3
             <span class="stage">Lead QA Audit</span></span>
@@ -970,9 +968,9 @@
         <div class="p-row" style="border-bottom:none;">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#F0F0EF"/>
-              <polygon points="0,16 32,32 32,74 0,58" fill="#FFFFFF"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#000000"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#EAF6EF"/>
+              <polygon points="0,16 32,32 32,74 0,58" fill="#5CD6A3"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#153F30"/>
             </svg>
             <span>Step 4
             <span class="stage">Delivery & Iteration</span></span>
@@ -1035,7 +1033,7 @@
         <div class="eyebrow">About Distinction Lab</div>
         <p class="lede">Your dedicated data operations department — without the department.</p>
         <svg class="network-deco" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g stroke="#1A1A1A" stroke-width="1.2" opacity="0.55">
+          <g stroke="#1F6B4D" stroke-width="1.2" opacity="0.55">
             <line x1="40" y1="40" x2="150" y2="30"/>
             <line x1="150" y1="30" x2="260" y2="55"/>
             <line x1="150" y1="30" x2="120" y2="120"/>
@@ -1046,7 +1044,7 @@
             <line x1="60" y1="140" x2="150" y2="195"/>
             <line x1="150" y1="195" x2="220" y2="150"/>
           </g>
-          <g fill="#000000">
+          <g fill="#153F30">
             <circle cx="40" cy="40" r="5"/>
             <circle cx="150" cy="30" r="6"/>
             <circle cx="260" cy="55" r="5"/>
@@ -1055,7 +1053,7 @@
             <circle cx="220" cy="150" r="5"/>
             <circle cx="150" cy="195" r="6"/>
           </g>
-          <g fill="#FFFFFF">
+          <g fill="#5CD6A3">
             <circle cx="120" cy="120" r="3"/>
             <circle cx="150" cy="30" r="2.5"/>
           </g>
@@ -1183,7 +1181,7 @@
     <p>Send your first 100 items — free — and see what a real data operations team looks like.</p>
     <div class="hero-cta">
       <a href="mailto:hello@distinctionlab.ai" class="btn on-dark">Start Your Free Trial</a>
-      <a href="mailto:hello@distinctionlab.ai" class="btn ghost" style="border-color:#3B4749; color:#E4E4E2;">Talk to Our Team</a>
+      <a href="mailto:hello@distinctionlab.ai" class="btn ghost" style="border-color:#3B4749; color:#DDE3DD;">Talk to Our Team</a>
     </div>
   </div>
 </div>
