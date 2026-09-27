@@ -690,53 +690,6 @@
     font-style:italic;
   }
 
-  /* FOUNDER */
-  .founder{
-    display:grid;
-    grid-template-columns: 260px 1fr;
-    gap:56px;
-  }
-  @media (max-width:800px){ .founder{ grid-template-columns:1fr; gap:28px; } }
-  .founder-card{
-    border:1px solid var(--line);
-    padding:28px;
-    background:var(--paper-dim);
-    height:fit-content;
-  }
-  .avatar{
-    width:100%;
-    aspect-ratio:1;
-    background:#DEDED9;
-    position:relative;
-    margin-bottom:18px;
-    overflow:hidden;
-    border:1px solid var(--line);
-  }
-  .avatar img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:50% 22%;
-    display:block;
-  }
-  .founder-card .fname{ font-family:'Instrument Serif', serif; font-size:22px; }
-  .founder-card .frole{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--slate); margin-top:4px; }
-  .quote{
-    font-family:'Instrument Serif', serif;
-    font-size:clamp(20px,2.3vw,27px);
-    line-height:1.5;
-    font-style:italic;
-    color:var(--ink);
-  }
-  .quote p{ margin:0 0 22px; }
-  .quote .sig{
-    margin-top:28px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    font-style:normal;
-    color:var(--slate);
-  }
-
   /* FAQ */
   .faq{ border-top:1px solid var(--line); }
   .faq-item{
@@ -840,7 +793,6 @@
       <a href="#why">Why Us</a>
       <a href="#how">How It Works</a>
       <a href="#label">What We Label</a>
-      <a href="#founder">Founder</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
@@ -1194,30 +1146,10 @@
   </section>
 
   <!-- FOUNDER -->
-  <section id="founder" style="border-top:1px solid var(--line);">
-    <div class="wrap founder">
-      <div class="founder-card">
-        <div class="avatar"><img src="assets/founder.png" alt="Chuong Nguyen, Founder & CEO of Distinction Lab"></div>
-        <div class="fname">Chuong Nguyen</div>
-        <div class="frole">FOUNDER & CEO, DISTINCTION LAB</div>
-      </div>
-      <div>
-        <div class="eyebrow">A Message From Our Founder</div>
-        <div class="quote">
-          <p>"The ultimate competitive advantage in AI has shifted entirely to data quality. Yet, I constantly see brilliant machine learning engineers and startup founders wasting up to 40% of their time managing freelancers and fixing noisy, inaccurate labels.</p>
-          <p>Building an in-house data annotation layer is slow, rigid, and burns precious runway. We founded Distinction Lab to eliminate this bottleneck. Our mission is to give growing AI teams the best of both worlds: Western-standard data accuracy combined with the elastic efficiency and cost advantages of Southeast Asia's top technical talent.</p>
-          <p>We take complete charge of the data pipeline so your team can focus entirely on code and model performance. We are so confident in our speed and precision that we remove all financial risk — proving our value with a free calibration batch before you ever spend a dollar.</p>
-          <p>Let us unbottleneck your development team so you can focus on building what's next."</p>
-          <div class="sig">— Chuong Nguyen, Founder & CEO, Distinction Lab</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 05 ]</span><span>FAQ</span></div>
+      <div class="sys-tag"><span class="idx">[ 04 ]</span><span>FAQ</span></div>
       <div class="section-head" style="margin-bottom:20px;">
         <h2>Questions founders ask</h2>
         <p>If yours isn't here, ask us directly — a real person answers.</p>
@@ -1272,7 +1204,6 @@
         <h5>Company</h5>
         <a href="#why">Why Us</a>
         <a href="#how">How It Works</a>
-        <a href="#founder">Founder</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="footer-col">
@@ -1297,7 +1228,7 @@
 
 <script>
   // Reveal on scroll
-  const revealEls = document.querySelectorAll('.why-card, .p-row, .label-cell, .founder, .vm-cell');
+  const revealEls = document.querySelectorAll('.why-card, .p-row, .label-cell, .vm-cell');
   revealEls.forEach(el => el.classList.add('reveal'));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
