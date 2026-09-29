@@ -26,11 +26,11 @@
     --paper-dim:#0b0b0b;
     --ink:#ffffff;
     --ink-soft:#c9c9c9;
-    --green:#dcdcdc;
-    --green-deep:#ffffff;
-    --amber:#9a9a9a;
+    --green:#3DDC84;
+    --green-deep:#8B5CF6;
+    --amber:#FF9F43;
     --slate:#ababab;
-    --blue:#6a6a6a;
+    --blue:#4FA8FF;
     --line: rgba(255,255,255,0.16);
     --line-soft: rgba(255,255,255,0.12);
     --radius: 2px;
@@ -73,8 +73,8 @@
     gap:9px;
     margin-bottom:18px;
     padding:6px 13px 6px 10px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.21);
+    background:rgba(61,220,132,.10);
+    border:1px solid rgba(61,220,132,.32);
     width:fit-content;
   }
   .eyebrow::before{
@@ -442,9 +442,9 @@
     transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
   }
   .why-card:hover{
-    background:rgba(255,255,255,.035);
+    background:rgba(61,220,132,.035);
     transform:translateY(-3px);
-    box-shadow:0 14px 30px rgba(0,0,0,.5);
+    box-shadow:0 14px 30px rgba(0,0,0,.5), 0 0 0 1px rgba(61,220,132,.18) inset;
     z-index:2;
   }
   .why-card .num{
@@ -514,7 +514,7 @@
     padding:4px 10px;
     border:1px solid var(--green);
     color:var(--green-deep);
-    background:rgba(255,255,255,.06);
+    background:rgba(61,220,132,.10);
     margin-top:10px;
   }
 
@@ -534,7 +534,7 @@
     position:relative;
     transition:background .25s ease;
   }
-  .label-cell:hover{ background:var(--paper-dim); }
+  .label-cell:hover{ background:rgba(61,220,132,.045); }
   .label-cell .icon-mark{
     width:60px; height:60px;
     display:flex; align-items:center; justify-content:center;
@@ -640,23 +640,24 @@
     font-weight:600;
     letter-spacing:.14em;
     text-transform:uppercase;
-    color:#DDE3DD;
+    color:#9fd0ff;
     margin-bottom:18px;
     display:inline-flex;
     align-items:center;
     gap:9px;
     padding:6px 13px 6px 10px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.28);
+    background:rgba(79,168,255,.12);
+    border:1px solid rgba(79,168,255,.35);
   }
   .vm-cell .eyebrow2::before{
     content:"";
     width:7px;height:7px;
     border-radius:50%;
-    background:#FFFFFF;
+    background:#4FA8FF;
     flex:none;
   }
-  .vm-cell:last-child .eyebrow2{ color:#DDE3DD; }
+  .vm-cell:last-child .eyebrow2{ color:#8ff0bb; background:rgba(61,220,132,.12); border-color:rgba(61,220,132,.35); }
+  .vm-cell:last-child .eyebrow2::before{ background:#3DDC84; }
   .vm-cell p.big{
     font-family:'Instrument Serif', serif;
     font-size:26px;
@@ -708,7 +709,7 @@
     margin:0 auto;
     line-height:1.1;
   }
-  .cta-banner h2 em{ color:#9a9a9a; font-style:italic; }
+  .cta-banner h2 em{ color:#3DDC84; font-style:italic; }
   .cta-banner p{ color:#9a9a9a; margin-top:18px; font-size:16px; }
   .cta-banner .hero-cta{ justify-content:center; margin-top:32px; }
 
@@ -902,9 +903,9 @@
         <div class="p-row trial">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#ffffff"/>
-              <polygon points="0,16 32,32 32,74 0,58" fill="#bdbdbd"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#6b6b6b"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#c9ffd9"/>
+              <polygon points="0,16 32,32 32,74 0,58" fill="#3DDC84"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#1c8a4d"/>
             </svg>
             <span>Step 0 — Free
             <span class="stage">Calibration Trial</span></span>
@@ -957,9 +958,9 @@
         <div class="p-row" style="border-bottom:none;">
           <div class="p-label">
             <svg class="iso-icon" viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,0 64,16 32,32 0,16" fill="#ffffff"/>
-              <polygon points="0,16 32,32 32,74 0,58" fill="#bdbdbd"/>
-              <polygon points="32,32 64,16 64,58 32,74" fill="#6b6b6b"/>
+              <polygon points="32,0 64,16 32,32 0,16" fill="#e3d6ff"/>
+              <polygon points="0,16 32,32 32,74 0,58" fill="#8B5CF6"/>
+              <polygon points="32,32 64,16 64,58 32,74" fill="#5b34a8"/>
             </svg>
             <span>Step 4
             <span class="stage">Delivery & Iteration</span></span>
@@ -982,7 +983,7 @@
     <div class="wrap" style="padding:0;">
       <div class="label-grid">
         <div class="label-cell">
-          <div class="icon-mark c-green"><svg viewBox="0 0 24 24" fill="none"><path d="M7 9h9" stroke-width="1.8"/><path d="M13.5 5.5L17 9l-3.5 3.5" stroke-width="1.8"/><path d="M17 15H8" stroke-width="1.8"/><path d="M10.5 18.5L7 15l3.5-3.5" stroke-width="1.8"/></svg></div>
+          <div class="icon-mark c-green"><svg viewBox="0 0 24 24" fill="none"><path d="M11.6 3.5h5.4a1 1 0 0 1 1 1v5.4a1 1 0 0 1-.3.7l-8 8a1 1 0 0 1-1.4 0l-5.5-5.5a1 1 0 0 1 0-1.4l8-8a1 1 0 0 1 .8-.2z" stroke-width="1.7"/><circle cx="14.6" cy="8.4" r="1.25" stroke-width="1.7"/></svg></div>
           <div class="tag-row"><span class="tag-mono">AI DATA OPERATIONS</span><span class="idx-mono">01</span></div>
           <h4>Data Annotation & Labeling</h4>
           <ul>
@@ -993,7 +994,7 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-blue"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 6 12 6s9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z" stroke-width="1.7"/><circle cx="12" cy="12" r="2.6" stroke-width="1.7"/></svg></div>
+          <div class="icon-mark c-blue"><svg viewBox="0 0 24 24" fill="none"><path d="M7 9h9" stroke-width="1.8"/><path d="M13.5 5.5L17 9l-3.5 3.5" stroke-width="1.8"/><path d="M17 15H8" stroke-width="1.8"/><path d="M10.5 18.5L7 15l3.5-3.5" stroke-width="1.8"/></svg></div>
           <div class="tag-row"><span class="tag-mono">LLM DATA</span><span class="idx-mono">02</span></div>
           <h4>LLM & RLHF Alignment</h4>
           <ul>
@@ -1004,29 +1005,29 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-teal"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18l3-11h1l3 11" stroke-width="1.8"/><path d="M7.3 13.5h4.4" stroke-width="1.8"/><path d="M15.5 10.5c1 -1 4 -1 4 1.2 0 1.6-4 1.4-4 3.3 0 1.4 3 1.6 4 .5" stroke-width="1.8"/></svg></div>
+          <div class="icon-mark c-teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16l-6.2 7.4v5.4l-3.6 1.7v-7.1z" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
           <div class="tag-row"><span class="tag-mono">DATA PREPARATION</span><span class="idx-mono">03</span></div>
           <h4>Data Curation & Preprocessing</h4>
           <ul>
-            <li><b>Data Cleaning:</b> Remove errors, duplicates, and inconsistencies</li>
-            <li><b>Data Structuring:</b> Organize unstructured data into usable formats</li>
+            <li><b>Data Cleaning:</b> Remove errors, duplicates, and inconsistencies.</li>
+            <li><b>Data Structuring:</b> Organize unstructured data into usable formats.</li>
             <li><b>Schema & Guidelines:</b> Build clear labeling frameworks.</li>
             <li><b>Data Validation:</b> Check datasets for completeness and consistency.</li>
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-amber"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3.5h8l4.5 4.5V19.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1z" stroke-width="1.7"/><path d="M14 3.5V8.5h4.5" stroke-width="1.7"/><line x1="7.8" y1="13" x2="15.5" y2="13" stroke-width="1.7"/><line x1="7.8" y1="16.3" x2="15.5" y2="16.3" stroke-width="1.7"/></svg></div>
+          <div class="icon-mark c-amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2l7 3v5.3c0 4.6-3 7.7-7 8.9-4-1.2-7-4.3-7-8.9v-5.3z" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.7 12.3l2.1 2.1 4.3-4.4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="tag-row"><span class="tag-mono">QUALITY ASSURANCE</span><span class="idx-mono">04</span></div>
           <h4>Data Quality & QA</h4>
           <ul>
             <li><b>Multi-Stage Review:</b> Structured checks throughout production.</li>
             <li><b>Annotation QA:</b> Identify and correct labeling errors.</li>
             <li><b>Consensus Review:</b> Resolve disagreements and edge cases.</li>
-            <li><b>Continuous Improvement:</b>Use feedback to improve future batches</li>
+            <li><b>Continuous Improvement:</b> Use feedback to improve future batches.</li>
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-slate"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1" stroke-width="1.7"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1" stroke-width="1.7"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1" stroke-width="1.7"/><rect x="13" y="13" width="7.5" height="7.5" rx="1" stroke-width="1.7"/></svg></div>
+          <div class="icon-mark c-slate"><svg viewBox="0 0 24 24" fill="none"><path d="M4.5 19V11" stroke-width="1.8" stroke-linecap="round"/><path d="M10.5 19V5" stroke-width="1.8" stroke-linecap="round"/><path d="M16.5 19v-7.5" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <div class="tag-row"><span class="tag-mono">MODEL EVALUATION</span><span class="idx-mono">05</span></div>
           <h4>Human-Led Model Evaluation</h4>
           <ul>
@@ -1037,14 +1038,14 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-rust"><svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2.5a8 8 0 0 1 16 0V14" stroke-width="1.7"/><rect x="3" y="13" width="4" height="6.5" rx="1.5" stroke-width="1.7"/><rect x="17" y="13" width="4" height="6.5" rx="1.5" stroke-width="1.7"/></svg></div>
+          <div class="icon-mark c-rust"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8.2" r="2.9" stroke-width="1.7"/><path d="M3.3 19.2c0-3.2 2.6-5.4 5.7-5.4s5.7 2.2 5.7 5.4" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.3" cy="9" r="2.15" stroke-width="1.7"/><path d="M15 14.3c2.7.1 4.9 2 5.1 4.9" stroke-width="1.7" stroke-linecap="round"/></svg></div>
           <div class="tag-row"><span class="tag-mono">MANAGED DATA OPERATIONS</span><span class="idx-mono">06</span></div>
           <h4>Your Dedicated AI Data Team</h4>
           <ul>
             <li><b>Team Setup:</b> Trained teams built around your requirements.</li>
-            <li><b>Project Management</b> We manage production and delivery.</li>
+            <li><b>Project Management:</b> We manage production and delivery.</li>
             <li><b>Quality Management:</b> Dedicated QA throughout the workflow.</li>
-            <li><b>Scalable Capacity:</b> Increase or reduce capacity as your needs change</li>
+            <li><b>Scalable Capacity:</b> Increase or reduce capacity as your needs change.</li>
           </ul>
         </div>
       </div>
