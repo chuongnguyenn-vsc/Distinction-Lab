@@ -404,35 +404,57 @@
     background:linear-gradient(90deg, #3DDC84, #4FA8FF);
   }
   .pricing-col .tagline{
+    display:inline-block;
     font-family:'IBM Plex Mono', monospace;
-    font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--slate); margin-bottom:14px;
+    font-size:14px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:#ffcc92; margin-bottom:20px;
+    padding:8px 16px;
+    border:1px solid rgba(255,159,67,.4);
+    background:rgba(255,159,67,.12);
   }
-  .pricing-col.highlight .tagline{ color:#8ff0bb; }
+  .pricing-col.highlight .tagline{
+    color:#8ff0bb;
+    border-color:rgba(61,220,132,.5);
+    background:rgba(61,220,132,.14);
+  }
   .pricing-col h3{
     font-family:'Instrument Serif', serif;
-    font-size:28px; margin-bottom:10px; color:#fff;
+    font-size:38px; line-height:1.15; margin-bottom:14px; color:#fff;
   }
-  .pricing-col .sub{ color:var(--ink-soft); font-size:14.5px; margin-bottom:24px; max-width:40ch; }
+  .pricing-col.base h3{ color:#e8e8e8; }
+  .pricing-col.highlight h3{ color:#fff; text-shadow:0 0 28px rgba(61,220,132,.25); }
+  .pricing-col .sub{ color:var(--ink-soft); font-size:17.5px; line-height:1.6; margin-bottom:28px; max-width:42ch; }
   .pricing-col ul{ list-style:none; margin:0 0 26px; padding:0; }
   .pricing-col li{
-    display:flex; align-items:flex-start; gap:10px;
-    padding:10px 0; border-top:1px dashed rgba(255,255,255,.12);
-    font-size:14.5px; color:var(--ink-soft);
+    display:flex; align-items:flex-start; gap:12px;
+    padding:13px 0; border-top:1px dashed rgba(255,255,255,.12);
+    font-size:16.5px; line-height:1.5; color:var(--ink-soft);
   }
   .pricing-col li:first-child{ border-top:none; }
-  .pricing-col .mark{ flex:none; width:16px; height:16px; margin-top:2px; }
-  .pricing-col.base .mark{ color:#6a6a6a; }
+  .pricing-col .mark{ flex:none; width:19px; height:19px; margin-top:3px; }
+  .pricing-col.base .mark{ color:#a8824f; }
   .pricing-col.highlight .mark{ color:#3DDC84; }
   .pricing-col .price-row{
-    display:flex; align-items:baseline; gap:8px; margin-bottom:4px;
+    display:flex; align-items:baseline; gap:10px; margin-bottom:6px; flex-wrap:wrap;
   }
-  .pricing-col .price-row .amt{ font-family:'IBM Plex Mono', monospace; font-size:30px; font-weight:600; color:#fff; }
-  .pricing-col .price-row .unit{ font-size:13.5px; color:var(--slate); }
+  .pricing-col .price-row .amt{ font-family:'IBM Plex Mono', monospace; font-size:52px; font-weight:600; color:#fff; letter-spacing:-0.01em; }
+  .pricing-col.highlight .price-row .amt{ color:#8ff0bb; }
+  .pricing-col .price-row .unit{ font-size:16.5px; color:var(--slate); }
   .pricing-foot{
     text-align:center; margin-top:40px;
-    font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--slate);
+    font-family:'IBM Plex Mono', monospace; font-size:14.5px; color:var(--slate);
   }
+  .trial-banner{
+    margin-top:8px;
+    padding:18px 20px;
+    border:1px solid rgba(61,220,132,.35);
+    background:rgba(61,220,132,.08);
+    display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap;
+  }
+  .trial-banner-text{ color:#dcf7e6; font-size:16px; line-height:1.55; max-width:36ch; }
+  .trial-banner-text strong{ color:#8ff0bb; }
+  .trial-banner .btn{ flex:none; }
+  @media (max-width:560px){ .trial-banner{ flex-direction:column; align-items:stretch; text-align:center; } .trial-banner-text{ max-width:none; } }
 
 
   section{ padding:96px 0; border-bottom:1px solid var(--line); scroll-margin-top:72px; position:relative; overflow:hidden; }
@@ -1219,9 +1241,13 @@
             <li><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Scales up or down with your volume, batch by batch</li>
             <li><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Dual-annotator QA and free rework included, always</li>
           </ul>
+          <div class="trial-banner">
+            <div class="trial-banner-text"><strong>Try it before you pay a dollar.</strong> Every project starts with a free 100-item calibration trial — no cost, no commitment.</div>
+            <a href="#trial" class="btn btn-solid">Start Free Trial</a>
+          </div>
         </div>
       </div>
-      <div class="pricing-foot">No tiers to pick from upfront — tell us your project, we quote it. <a href="#trial" style="color:#8ff0bb; text-decoration:underline;">Start with a free 100-item trial →</a></div>
+      <div class="pricing-foot">No tiers to pick from upfront — tell us your project, we quote it.</div>
     </div>
   </section>
 
