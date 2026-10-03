@@ -396,12 +396,13 @@
     padding:36px 34px;
   }
   .pricing-col.highlight{
-    background:linear-gradient(180deg, rgba(61,220,132,.07), rgba(0,0,0,0) 55%);
+    background:#0c1712;
+    border:1px solid rgba(61,220,132,.4);
     position:relative;
   }
   .pricing-col.highlight::before{
     content:""; position:absolute; inset:0 0 auto 0; height:3px;
-    background:linear-gradient(90deg, #3DDC84, #4FA8FF);
+    background:#3DDC84;
   }
   .pricing-col .tagline{
     display:inline-block;
@@ -438,7 +439,7 @@
     display:flex; align-items:baseline; gap:10px; margin-bottom:6px; flex-wrap:wrap;
   }
   .pricing-col .price-row .amt{ font-family:'IBM Plex Mono', monospace; font-size:52px; font-weight:600; color:#fff; letter-spacing:-0.01em; }
-  .pricing-col.highlight .price-row .amt{ color:#8ff0bb; }
+  .pricing-col.highlight .price-row .amt{ color:#8ff0bb; font-size:36px; line-height:1.2; }
   .pricing-col .price-row .unit{ font-size:16.5px; color:var(--slate); }
   .pricing-foot{
     text-align:center; margin-top:40px;
@@ -1233,9 +1234,10 @@
         <div class="pricing-col highlight">
           <div class="tagline">Distinction Lab</div>
           <h3>One Project-Based Rate</h3>
-          <div class="price-row"><span class="amt">Up to 70%</span><span class="unit">lower than in-house</span></div>
-          <p class="sub">You pay per project — scoped to your schema, volume, and timeline. Nothing fixed, nothing idle.</p>
+          <div class="price-row"><span class="amt">You Only Pay Per Project</span></div>
+          <p class="sub">No retainers, no subscriptions, no per-seat licenses — you only pay for the projects you actually run, each scoped to your schema, volume, and timeline.</p>
           <ul>
+            <li><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Up to 70% lower cost than running your own team</li>
             <li><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Transparent, project-based quote before work begins</li>
             <li><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>A dedicated pod — recruited, trained, and managed by us</li>
             <li><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Scales up or down with your volume, batch by batch</li>
