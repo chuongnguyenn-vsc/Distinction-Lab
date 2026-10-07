@@ -382,6 +382,47 @@
   }
   .strip-item b{ color:var(--ink); font-size:15px; }
 
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  @media (max-width:980px){ .testimonial-grid{ grid-template-columns:1fr; } }
+  .testimonial-card{
+    position:relative;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:34px 30px;
+    background:transparent;
+    transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .testimonial-card:hover{
+    background:rgba(61,220,132,.035);
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(0,0,0,.5), 0 0 0 1px rgba(61,220,132,.18) inset;
+    z-index:2;
+  }
+  .testimonial-card .stars{ display:flex; gap:3px; margin-bottom:18px; }
+  .testimonial-card .stars svg{ width:16px; height:16px; fill:#FFB238; }
+  .testimonial-card .t-quote{
+    font-size:17px; line-height:1.6; color:#e8e8e8; margin-bottom:26px; min-height:140px;
+  }
+  .testimonial-card .t-person{ display:flex; align-items:center; gap:13px; }
+  .testimonial-card .t-avatar{
+    width:42px; height:42px; border-radius:50%; flex:none;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:15px;
+    background:linear-gradient(145deg,#3DDC84,#1c8a4d); color:#06240f;
+  }
+  .testimonial-card .t-name{ font-size:15.5px; font-weight:600; color:#fff; }
+  .testimonial-card .t-role{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--slate); margin-top:2px; }
+  .testimonials-note{
+    text-align:center; margin-top:36px;
+    font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--slate);
+  }
+
   /* ---------- PRICING ---------- */
   .pricing-grid{
     display:grid;
@@ -851,7 +892,8 @@
     <a href="#how" class="appear appear--soft" style="--d:.28s">How It Works</a>
     <a href="#label" class="appear appear--scale" style="--d:.40s">Our Services</a>
     <a href="#pricing" class="appear appear--soft" style="--d:.48s">Pricing</a>
-    <a href="#faq" class="appear appear--scale" style="--d:.56s">FAQs</a>
+    <a href="#testimonials" class="appear appear--scale" style="--d:.56s">Reviews</a>
+    <a href="#faq" class="appear appear--soft" style="--d:.64s">FAQs</a>
   </nav>
   <a href="#trial" class="btn btn-solid header-cta appear appear--scale" style="--d:.34s">Start Free Trial</a>
   <button class="burger appear appear--scale" style="--d:.34s" id="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -1255,6 +1297,73 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="sys-tag"><span class="idx">[ 06 ]</span><span>Feedback</span></div>
+      <div class="section-head">
+        <h2>What founders say after working with us</h2>
+        <p>Real feedback from teams who handed us their data pipeline — in their own words.</p>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0;">
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+          </div>
+          <p class="t-quote">"We tried managing annotation in-house for two months before switching. The free trial alone caught labeling inconsistencies our own team had missed. Turnaround on real batches has been close to 48 hours."</p>
+          <div class="t-person">
+            <div class="t-avatar">R</div>
+            <div>
+              <div class="t-name">Riya Shah</div>
+              <div class="t-role">Co-Founder, Early-Stage AI Startup</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+          </div>
+          <p class="t-quote">"The dual-annotator QA caught edge cases we hadn't even written guidelines for yet. Pricing per project made budgeting predictable instead of guessing at a monthly retainer."</p>
+          <div class="t-person">
+            <div class="t-avatar">M</div>
+            <div>
+              <div class="t-name">Marcus Lee</div>
+              <div class="t-role">ML Lead, Seed-Stage Startup</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1.2l2.6 5.5 6 .8-4.4 4.1 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.5l6-.8z"/></svg>
+          </div>
+          <p class="t-quote">"Our engineers were writing labeling guidelines and reviewing batches at 11pm. Handing that to a dedicated pod gave us back a full day a week, easily — and the data quality went up, not down."</p>
+          <div class="t-person">
+            <div class="t-avatar">A</div>
+            <div>
+              <div class="t-name">Anh Tran</div>
+              <div class="t-role">Founder, Series A AI Company</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-note">Sample feedback shown for illustration — swap in real client quotes once collected.</div>
+    </div>
+  </section>
+
   <!-- VISION / MISSION -->
   <section style="padding-bottom:0; border-bottom:none;">
     <div class="wrap" style="padding:0; max-width:100%;">
@@ -1275,7 +1384,7 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 06 ]</span><span>FAQ</span></div>
+      <div class="sys-tag"><span class="idx">[ 07 ]</span><span>FAQ</span></div>
       <div class="section-head" style="margin-bottom:20px;">
         <h2>Questions founders ask</h2>
         <p>If yours isn't here, ask us directly — a real person answers.</p>
@@ -1331,6 +1440,7 @@
         <a href="#why">Why Us</a>
         <a href="#how">How It Works</a>
         <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="footer-col">
