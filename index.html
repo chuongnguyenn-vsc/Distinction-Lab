@@ -423,6 +423,29 @@
     font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--slate);
   }
 
+  /* feedback form */
+  .feedback-box{
+    margin-top:44px; padding:36px 34px;
+    border:1px solid rgba(61,220,132,.4); background:#0c1712;
+  }
+  .feedback-box h3{ font-family:'Instrument Serif', serif; font-size:30px; color:#fff; margin-bottom:8px; }
+  .feedback-box > p{ color:var(--ink-soft); font-size:16px; margin-bottom:24px; max-width:60ch; }
+  .fb-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .fb-grid{ grid-template-columns:1fr; } }
+  .fb-grid .full{ grid-column:1 / -1; }
+  .feedback-box label{
+    display:block; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.06em;
+    text-transform:uppercase; color:#8ff0bb; margin-bottom:6px;
+  }
+  .feedback-box input, .feedback-box textarea, .feedback-box select{
+    width:100%; padding:12px 14px; font:inherit; font-size:15.5px; color:#fff;
+    background:#050505; border:1px solid rgba(255,255,255,.2); border-radius:4px;
+  }
+  .feedback-box textarea{ min-height:130px; resize:vertical; }
+  .feedback-box input:focus, .feedback-box textarea:focus, .feedback-box select:focus{ outline:2px solid #3DDC84; outline-offset:1px; }
+  .fb-actions{ margin-top:18px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .fb-hint{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--slate); }
+
   /* ---------- PRICING ---------- */
   .pricing-grid{
     display:grid;
@@ -1361,6 +1384,24 @@
         </div>
       </div>
       <div class="testimonials-note">Sample feedback shown for illustration — swap in real client quotes once collected.</div>
+
+      <div class="feedback-box" id="feedback">
+        <h3>Worked with us? Share your feedback</h3>
+        <p>Tell us how your project went — what worked, and what we could do better. Your comments help future teams and help us improve.</p>
+        <form id="feedbackForm">
+          <div class="fb-grid">
+            <div><label for="fbName">Your name</label><input id="fbName" type="text" placeholder="Jane Doe" required></div>
+            <div><label for="fbRole">Role &amp; company</label><input id="fbRole" type="text" placeholder="ML Lead, Acme AI"></div>
+            <div class="full"><label for="fbRating">Overall rating</label>
+              <select id="fbRating"><option>5 — Excellent</option><option>4 — Good</option><option>3 — Okay</option><option>2 — Needs work</option><option>1 — Poor</option></select></div>
+            <div class="full"><label for="fbComment">Your comments</label><textarea id="fbComment" placeholder="How was the quality, turnaround, and communication?" required></textarea></div>
+          </div>
+          <div class="fb-actions">
+            <button type="submit" class="btn btn-solid">Send Feedback</button>
+            <span class="fb-hint">Opens your email app, addressed to hello@distinctionlab.ai</span>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -1508,6 +1549,17 @@
     document.querySelectorAll('#site-nav a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') setMenu(false); });
     window.matchMedia('(min-width: 901px)').addEventListener('change', function(e){ if(e.matches) setMenu(false); });
+  })();
+
+  // Feedback form -> opens email draft
+  (function(){
+    var f=document.getElementById('feedbackForm'); if(!f) return;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var g=function(id){ return document.getElementById(id).value.trim(); };
+      var body='Name: '+g('fbName')+'\nRole & company: '+g('fbRole')+'\nRating: '+g('fbRating')+'\n\nComments:\n'+g('fbComment');
+      window.location.href='mailto:hello@distinctionlab.ai?subject='+encodeURIComponent('Client feedback — '+g('fbName'))+'&body='+encodeURIComponent(body);
+    });
   })();
 </script>
 
