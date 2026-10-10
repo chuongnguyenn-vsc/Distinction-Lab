@@ -667,6 +667,32 @@
     *{ animation:none !important; transition:none !important; }
   }
   :focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+
+  /* ---------- ACCENT: one icy-cyan highlight for titles & subtitles (landing untouched) ---------- */
+  :root{ --accent:#7fe0ff; --accent2:#9ab8ff; }
+  .section-head h2 em, .about-inner .lede em, .vm-cell p.big em, .cta-banner h2 em{
+    background:linear-gradient(90deg,#a8ecff 0%,#7fc4ff 55%,#9ab8ff 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent;
+  }
+  .sys-tag{ color:var(--accent); }
+  .sys-tag .idx{ box-shadow:inset 3px 0 0 var(--accent); }
+  .why-card .num{ color:var(--accent); box-shadow:inset 3px 0 0 var(--accent); }
+  .why-card h3, .label-cell h4, .p-row .p-label .stage{ color:#fff; }
+  .why-card:hover h3, .label-cell:hover h4{ color:#bfeeff; }
+  .p-row .p-label{ color:var(--accent); }
+  .label-cell .tag-mono{ color:var(--accent); }
+  .pill{ color:#bfeeff; border-color:rgba(127,224,255,.45); }
+  .eyebrow, .vm-cell .eyebrow2{ color:#bfeeff; box-shadow:inset 3px 0 0 var(--accent); }
+  .pricing-col.highlight h3{ color:#bfeeff; }
+  .pricing-col.highlight .price-row .amt{ color:var(--accent); }
+  .pricing-col.highlight .mark{ color:var(--accent); }
+  .pricing-col.highlight::before{ background:linear-gradient(90deg,#7fe0ff,#fff 50%,#9ab8ff); }
+  .section-head p{ color:#d6e6ee; }
+  .feedback-box h3{ color:#bfeeff; }
+  .feedback-box label{ color:var(--accent); }
+  .testimonial-card .t-role{ color:var(--accent); }
+  .faq-item.open .faq-q{ color:#bfeeff; }
+  .footer-col h5{ color:var(--accent); }
 </style>
 </head>
 <body style="background:#000;color:#fff">
