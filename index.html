@@ -934,8 +934,10 @@
   .team-video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 
   /* ---------- TEAM: video left (like About) ---------- */
-  .team-layout{ display:grid; grid-template-columns:minmax(260px,360px) 1fr; gap:64px; align-items:center; }
+  .team-layout{ display:grid; grid-template-columns:minmax(260px,360px) 1fr; gap:48px; align-items:start; }
   .team-vid{ aspect-ratio:9/16; max-width:360px; width:100%; justify-self:center; }
+  .team-vid{ position:sticky; top:110px; }
+  @media (max-width:1000px){ .team-vid{ position:relative; top:auto; } }
   .team-vid iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
   .team-layout .team-grid{ grid-template-columns:repeat(2,1fr); max-width:none; margin:0; }
   @media (max-width:1000px){ .team-layout{ grid-template-columns:1fr; gap:34px; } .team-vid{ max-width:320px; } }
@@ -945,6 +947,17 @@
   .team-layout{ align-items:center; }
   .team-vid{ position:relative; top:auto; }
   .team-layout .team-photo{ aspect-ratio:1/1; }
+
+  /* ---------- WHY US: short, punchy hooks ---------- */
+  #why .why-card h3.hook{ font-size:clamp(30px,2.7vw,40px); line-height:1.1; letter-spacing:-.04em; margin-bottom:14px; }
+  #why .why-card h3.hook em{ font-style:normal; font-family:var(--font-display); font-weight:400; font-size:1.02em; letter-spacing:-.02em; color:#fff;
+    text-shadow:0 0 22px color-mix(in srgb, var(--c) 55%, transparent); }
+  #why .why-card p.hook-p{ font-size:19px; line-height:1.45; color:#e8e8e8; }
+  #why .why-card{ padding-bottom:34px; }
+  #why .scene{ height:190px; }
+  #why .why-card h3.hook{ color:#fff; }
+  #why .why-card h3.hook em{ color:var(--c); text-shadow:0 0 24px color-mix(in srgb, var(--c) 50%, transparent); }
+  #why .why-card:hover h3.hook{ color:#fff; }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1049,30 +1062,34 @@
       <div class="sys-tag"><span class="idx">[ 01 ]</span><span>Why Us</span></div>
       <div class="section-head">
         <h2>Why founders choose <em>Distinction Lab</em></h2>
-        <p>Every AI team eventually hits the same wall: clean data takes more people, process, and time than expected. We built an efficient data department so you don't have to.</p>
+        <p>Clean data takes more people, process and time than expected. We built the team so you don't have to.</p>
       </div>
     </div>
     <div class="wrap" style="padding:0;">
       <div class="why-grid">
-        <div class="why-card c-gold"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><rect class="sb" style="--i:0" x="40" y="30" width="26" height="70" rx="6" opacity=".35"/><rect class="sb" style="--i:1" x="82" y="50" width="26" height="50" rx="6" opacity=".55"/><rect class="sb" style="--i:2" x="124" y="68" width="26" height="32" rx="6" opacity=".8"/><rect class="sb" style="--i:3" x="166" y="82" width="26" height="18" rx="6"/></g><path class="sdraw" d="M30 34 L100 54 L150 70 L200 84" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g class="scoin"><circle cx="205" cy="26" r="14" fill="currentColor"/><text x="205" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#111">$</text></g></svg></div>
+        <div class="why-card c-gold">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><rect class="sb" style="--i:0" x="40" y="30" width="26" height="70" rx="6" opacity=".35"/><rect class="sb" style="--i:1" x="82" y="50" width="26" height="50" rx="6" opacity=".55"/><rect class="sb" style="--i:2" x="124" y="68" width="26" height="32" rx="6" opacity=".8"/><rect class="sb" style="--i:3" x="166" y="82" width="26" height="18" rx="6"/></g><path class="sdraw" d="M30 34 L100 54 L150 70 L200 84" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g class="scoin"><circle cx="205" cy="26" r="14" fill="currentColor"/><text x="205" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#111">$</text></g></svg></div>
           <div class="num mono">OPTIMISED OPERATIONAL COST</div>
-          <h3>Cost-Efficient Project Model</h3>
-          <p>We streamline your data operations through structured, project-based execution: delivering high-quality datasets at a fraction of the cost of recruiting, onboarding, and managing an in-house team.</p>
+          <h3 class="hook">Cut costs by up to <em>70%</em></h3>
+          <p class="hook-p">Project-based pricing. No hiring. No overhead.</p>
         </div>
-        <div class="why-card c-mint"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="120" cy="60" r="46" opacity=".35"/><circle cx="120" cy="60" r="30" opacity=".6"/><circle cx="120" cy="60" r="14"/><circle class="sring" cx="120" cy="60" r="14"/></g><circle cx="120" cy="60" r="6" fill="currentColor"/><g stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M120 6V22M120 98V114M66 60H82M158 60H174"/></g><path class="sdraw2" d="M168 28l9 9 17-20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="why-card c-mint">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="120" cy="60" r="46" opacity=".35"/><circle cx="120" cy="60" r="30" opacity=".6"/><circle cx="120" cy="60" r="14"/><circle class="sring" cx="120" cy="60" r="14"/></g><circle cx="120" cy="60" r="6" fill="currentColor"/><g stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M120 6V22M120 98V114M66 60H82M158 60H174"/></g><path class="sdraw2" d="M168 28l9 9 17-20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="num mono">ACCURACY</div>
-          <h3>>98% Precision SLA with 100% Free Rework</h3>
-          <p>Every project includes explicit accuracy guarantees and dual-layer QA. If a batch falls below your standard, Distinction Lab re-annotates the entire run at zero extra cost.</p>
+          <h3 class="hook"><em>&gt;98%</em> accurate. Guaranteed.</h3>
+          <p class="hook-p">Below standard? We redo it free.</p>
         </div>
-        <div class="why-card c-sky"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="3" opacity=".5"/><circle class="sdash" cx="120" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 9" stroke-linecap="round"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M120 22v8M120 90v8M82 60h8M150 60h8" opacity=".6"/><path d="M120 60V40"/><path class="shand" d="M120 60V30"/></g><circle cx="120" cy="60" r="4.5" fill="currentColor"/><g class="sfloat"><rect x="166" y="12" width="52" height="24" rx="12" fill="currentColor"/><text x="192" y="29" text-anchor="middle" font-size="13" font-weight="700" fill="#111">+15h</text></g></svg></div>
+        <div class="why-card c-sky">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="3" opacity=".5"/><circle class="sdash" cx="120" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 9" stroke-linecap="round"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M120 22v8M120 90v8M82 60h8M150 60h8" opacity=".6"/><path d="M120 60V40"/><path class="shand" d="M120 60V30"/></g><circle cx="120" cy="60" r="4.5" fill="currentColor"/><g class="sfloat"><rect x="166" y="12" width="52" height="24" rx="12" fill="currentColor"/><text x="192" y="29" text-anchor="middle" font-size="13" font-weight="700" fill="#111">+15h</text></g></svg></div>
           <div class="num mono">TIME</div>
-          <h3>Reclaim 15+ hours a week</h3>
-          <p>Stop turning ML engineers into crowd managers. Distinction Lab owns recruitment, training, daily operations, and edge-case resolution. You simply review the output.</p>
+          <h3 class="hook">Get <em>15+ hours</em> back every week</h3>
+          <p class="hook-p">Your engineers build. We run the data.</p>
         </div>
-        <div class="why-card c-rose"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path class="spulse" d="M120 12L168 28V62C168 88 146 104 120 110C94 104 72 88 72 62V28Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path class="sdraw2" d="M98 60l16 16 30-34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><g fill="currentColor"><circle class="sdot" style="--i:0" cx="34" cy="40" r="3.5"/><circle class="sdot" style="--i:1" cx="206" cy="48" r="3.5"/><circle class="sdot" style="--i:2" cx="40" cy="86" r="3.5"/><circle class="sdot" style="--i:3" cx="200" cy="92" r="3.5"/></g><g class="sfloat"><rect x="152" y="6" width="68" height="22" rx="11" fill="currentColor"/><text x="186" y="21" text-anchor="middle" font-size="12" font-weight="700" fill="#111">100 free</text></g></svg></div>
+        <div class="why-card c-rose">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path class="spulse" d="M120 12L168 28V62C168 88 146 104 120 110C94 104 72 88 72 62V28Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path class="sdraw2" d="M98 60l16 16 30-34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><g fill="currentColor"><circle class="sdot" style="--i:0" cx="34" cy="40" r="3.5"/><circle class="sdot" style="--i:1" cx="206" cy="48" r="3.5"/><circle class="sdot" style="--i:2" cx="40" cy="86" r="3.5"/><circle class="sdot" style="--i:3" cx="200" cy="92" r="3.5"/></g><g class="sfloat"><rect x="152" y="6" width="68" height="22" rx="11" fill="currentColor"/><text x="186" y="21" text-anchor="middle" font-size="12" font-weight="700" fill="#111">100 free</text></g></svg></div>
           <div class="num mono">RISK</div>
-          <h3>Risk-Free 100-Item Calibration Trial</h3>
-          <p>Test labeling precision, workflow speed, and QA guidelines on 100 actual dataset items at zero cost before making any financial commitment.</p>
+          <h3 class="hook">Try <em>100 items</em> free</h3>
+          <p class="hook-p">See our quality before you pay a cent.</p>
         </div>
       </div>
     </div>
