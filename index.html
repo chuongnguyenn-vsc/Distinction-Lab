@@ -958,6 +958,17 @@
   #why .why-card h3.hook{ color:#fff; }
   #why .why-card h3.hook em{ color:var(--c); text-shadow:0 0 24px color-mix(in srgb, var(--c) 50%, transparent); }
   #why .why-card:hover h3.hook{ color:#fff; }
+  /* ---------- TEAM: video under members ---------- */
+  .team-layout{ display:block; }
+  .team-grid{ grid-template-columns:repeat(4,1fr); gap:16px; }
+  @media (max-width:1100px){ .team-grid{ grid-template-columns:repeat(2,1fr); max-width:760px; margin:0 auto; } }
+  @media (max-width:560px){ .team-grid{ grid-template-columns:1fr; max-width:420px; } }
+  /* ---------- STANDARDS hooks (same as Why Us) ---------- */
+  #standards .why-card h3.hook{ font-size:clamp(30px,2.7vw,40px); line-height:1.1; letter-spacing:-.04em; margin-bottom:14px; color:#fff; }
+  #standards .why-card h3.hook em{ font-style:normal; font-family:var(--font-display); font-weight:400; letter-spacing:-.02em; color:var(--c); text-shadow:0 0 24px color-mix(in srgb, var(--c) 50%, transparent); }
+  #standards .why-card p.hook-p{ font-size:19px; line-height:1.45; color:#e8e8e8; }
+  #standards .why-card:hover h3.hook{ color:#fff; }
+  #standards .scene{ height:190px; }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1101,30 +1112,34 @@
       <div class="sys-tag"><span class="idx">[ 02 ]</span><span>Standards</span></div>
       <div class="section-head">
         <h2>Why choose <em>Distinction Lab</em></h2>
-        <p>Enterprise-grade rigor, delivered with startup speed and pricing you can actually plan around.</p>
+        <p>Enterprise-grade rigor. Startup speed. Pricing you can plan around.</p>
       </div>
     </div>
     <div class="wrap" style="padding:0;">
       <div class="why-grid">
-        <div class="why-card c-mint"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 5"><rect class="sbox" style="--i:0" x="30" y="34" width="50" height="46" rx="6"/><rect class="sbox" style="--i:1" x="96" y="48" width="48" height="48" rx="6"/><rect class="sbox" style="--i:2" x="160" y="26" width="48" height="54" rx="6"/></g><g fill="currentColor"><rect x="30" y="22" width="30" height="11" rx="5"/><rect x="96" y="36" width="30" height="11" rx="5"/><rect x="160" y="14" width="30" height="11" rx="5"/></g><rect class="sscan" x="14" y="8" width="3" height="104" rx="2" fill="currentColor"/></svg></div>
+        <div class="why-card c-mint">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 5"><rect class="sbox" style="--i:0" x="30" y="34" width="50" height="46" rx="6"/><rect class="sbox" style="--i:1" x="96" y="48" width="48" height="48" rx="6"/><rect class="sbox" style="--i:2" x="160" y="26" width="48" height="54" rx="6"/></g><g fill="currentColor"><rect x="30" y="22" width="30" height="11" rx="5"/><rect x="96" y="36" width="30" height="11" rx="5"/><rect x="160" y="14" width="30" height="11" rx="5"/></g><rect class="sscan" x="14" y="8" width="3" height="104" rx="2" fill="currentColor"/></svg></div>
           <div class="num mono">ACCURACY</div>
-          <h3>High-Precision Data Annotation</h3>
-          <p>Dual-layer quality assurance and dedicated operational pods maintain <strong>&gt;98% labeling accuracy</strong> to safeguard model performance.</p>
+          <h3 class="hook"><em>&gt;98%</em> label accuracy</h3>
+          <p class="hook-p">Dual-layer QA on every batch.</p>
         </div>
-        <div class="why-card c-orange"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path d="M20 90H220" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 7" stroke-linecap="round" opacity=".6"/><g fill="currentColor"><rect class="smove" style="--i:0" x="24" y="64" width="22" height="22" rx="5"/><rect class="smove" style="--i:1" x="24" y="64" width="22" height="22" rx="5"/><rect class="smove" style="--i:2" x="24" y="64" width="22" height="22" rx="5"/></g><rect x="170" y="42" width="48" height="48" rx="8" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="3"/><path class="sdraw2" d="M182 66l9 9 15-18" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="why-card c-orange">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path d="M20 90H220" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 7" stroke-linecap="round" opacity=".6"/><g fill="currentColor"><rect class="smove" style="--i:0" x="24" y="64" width="22" height="22" rx="5"/><rect class="smove" style="--i:1" x="24" y="64" width="22" height="22" rx="5"/><rect class="smove" style="--i:2" x="24" y="64" width="22" height="22" rx="5"/></g><rect x="170" y="42" width="48" height="48" rx="8" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="3"/><path class="sdraw2" d="M182 66l9 9 15-18" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="num mono">DELIVERY</div>
-          <h3>Streamlined Delivery Schedules</h3>
-          <p>Turnkey project management accelerates throughput and reduces operational bottlenecks for internal engineering teams.</p>
+          <h3 class="hook">Shipped <em>on schedule</em></h3>
+          <p class="hook-p">Turnkey project management. Zero bottlenecks.</p>
         </div>
-        <div class="why-card c-sky"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle class="sring2" style="--i:0" cx="120" cy="64" r="30"/><circle class="sring2" style="--i:1" cx="120" cy="64" r="30"/></g><path d="M20 64H84M156 64H220" stroke="currentColor" stroke-width="3" stroke-dasharray="3 8" stroke-linecap="round" class="sstream"/><path d="M104 56V46a16 16 0 0 1 32 0V56" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="92" y="54" width="56" height="44" rx="9" fill="currentColor"/><circle cx="120" cy="72" r="6" fill="#111"/><rect x="117" y="75" width="6" height="12" rx="3" fill="#111"/></svg></div>
+        <div class="why-card c-sky">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle class="sring2" style="--i:0" cx="120" cy="64" r="30"/><circle class="sring2" style="--i:1" cx="120" cy="64" r="30"/></g><path d="M20 64H84M156 64H220" stroke="currentColor" stroke-width="3" stroke-dasharray="3 8" stroke-linecap="round" class="sstream"/><path d="M104 56V46a16 16 0 0 1 32 0V56" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="92" y="54" width="56" height="44" rx="9" fill="currentColor"/><circle cx="120" cy="72" r="6" fill="#111"/><rect x="117" y="75" width="6" height="12" rx="3" fill="#111"/></svg></div>
           <div class="num mono">PRIVACY</div>
-          <h3>Enterprise-Grade Data Privacy</h3>
-          <p>End-to-end encryption, stream-only workspaces, and comprehensive legal agreements protect your proprietary IP.</p>
+          <h3 class="hook">Your data stays <em>yours</em></h3>
+          <p class="hook-p">End-to-end encryption. Stream-only workspaces.</p>
         </div>
-        <div class="why-card c-gold"><div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g class="sswing"><path d="M66 36H132L176 76L132 116H66Z" transform="translate(0 -12)" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="64" r="6" fill="none" stroke="currentColor" stroke-width="3"/><text x="120" y="76" text-anchor="middle" font-size="30" font-weight="700" fill="currentColor">$</text></g><g fill="currentColor"><circle class="sdot" style="--i:0" cx="30" cy="30" r="5"/><circle class="sdot" style="--i:1" cx="212" cy="38" r="5"/><circle class="sdot" style="--i:2" cx="206" cy="96" r="5"/></g></svg></div>
+        <div class="why-card c-gold">
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g class="sswing"><path d="M66 36H132L176 76L132 116H66Z" transform="translate(0 -12)" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="64" r="6" fill="none" stroke="currentColor" stroke-width="3"/><text x="120" y="76" text-anchor="middle" font-size="30" font-weight="700" fill="currentColor">$</text></g><g fill="currentColor"><circle class="sdot" style="--i:0" cx="30" cy="30" r="5"/><circle class="sdot" style="--i:1" cx="212" cy="38" r="5"/><circle class="sdot" style="--i:2" cx="206" cy="96" r="5"/></g></svg></div>
           <div class="num mono">PRICING</div>
-          <h3>Competitive, Transparent Pricing</h3>
-          <p>Predictable unit- and pod-based rates without SaaS platform markups, mandatory annual minimums, or hidden fees.</p>
+          <h3 class="hook"><em>Zero</em> hidden fees</h3>
+          <p class="hook-p">Simple, predictable rates. No minimums.</p>
         </div>
       </div>
     </div>
@@ -1438,43 +1453,44 @@
         <h2>Meet <em>Your Team</em></h2>
         <p>The people who run your data operation, from first guideline to final delivery.</p>
       </div>
-      <div class="team-layout">
-        <div class="about-video team-vid">
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="assets/team-chuong.jpg" alt="Chuong Nguyen, Founder &amp; CEO" loading="lazy" style="object-position:center 25%"></div>
+          <div class="team-info">
+            <h3>Chuong Nguyen</h3>
+            <div class="team-role">Founder &amp; CEO</div>
+            <a class="team-link" href="https://www.linkedin.com/in/nguyen-huynh-nhat-chuong/" target="_blank" rel="noopener noreferrer" aria-label="Chuong Nguyen on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="assets/team-ye.jpg" alt="Ye Aung, CTO" loading="lazy" style="object-position:center 20%"></div>
+          <div class="team-info">
+            <h3>Ye Aung</h3>
+            <div class="team-role">CTO</div>
+            <a class="team-link" href="https://www.linkedin.com/in/ye-thu-aung-16922831b/" target="_blank" rel="noopener noreferrer" aria-label="Ye Aung on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="assets/team-zyle.jpg" alt="Zyle Estacion, Head of Annotation Labelling" loading="lazy" style="object-position:center 30%"></div>
+          <div class="team-info">
+            <h3>Zyle Estacion</h3>
+            <div class="team-role">Head of Annotation Labelling</div>
+            <a class="team-link" href="https://www.linkedin.com/in/zyle-estacion-20b662226/" target="_blank" rel="noopener noreferrer" aria-label="Zyle Estacion on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </article>
+              <article class="team-card reveal">
+          <div class="team-photo"><img src="assets/team-linn.jpg" alt="Linn Nyo, Head of QA and Cybersecurity" loading="lazy" style="object-position:center 25%"></div>
+          <div class="team-info">
+            <h3>Linn Nyo</h3>
+            <div class="team-role">Head of QA and Cybersecurity</div>
+            <a class="team-link" href="https://www.linkedin.com/in/linn-htin-nyo-2031a8306/" target="_blank" rel="noopener noreferrer" aria-label="Linn Nyo on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </article>
+      </div>
+      <div class="team-video">
+        <div class="team-video-head"><span class="team-video-tag">Watch</span><h3>Meet the team in their own words</h3></div>
+        <div class="team-video-frame">
           <iframe src="https://drive.google.com/file/d/1YYOSqu7OctLY_BHSqsY8ZZoVWChzRj3f/preview" title="Distinction Lab team introduction video" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-        <div class="team-grid">
-          <article class="team-card reveal">
-            <div class="team-photo"><img src="assets/team-chuong.jpg" alt="Chuong Nguyen, Founder &amp; CEO" loading="lazy" style="object-position:center 25%"></div>
-            <div class="team-info">
-              <h3>Chuong Nguyen</h3>
-              <div class="team-role">Founder &amp; CEO</div>
-              <a class="team-link" href="https://www.linkedin.com/in/nguyen-huynh-nhat-chuong/" target="_blank" rel="noopener noreferrer" aria-label="Chuong Nguyen on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-            </div>
-          </article>
-          <article class="team-card reveal">
-            <div class="team-photo"><img src="assets/team-ye.jpg" alt="Ye Aung, CTO" loading="lazy" style="object-position:center 20%"></div>
-            <div class="team-info">
-              <h3>Ye Aung</h3>
-              <div class="team-role">CTO</div>
-              <a class="team-link" href="https://www.linkedin.com/in/ye-thu-aung-16922831b/" target="_blank" rel="noopener noreferrer" aria-label="Ye Aung on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-            </div>
-          </article>
-          <article class="team-card reveal">
-            <div class="team-photo"><img src="assets/team-zyle.jpg" alt="Zyle Estacion, Head of Annotation Labelling" loading="lazy" style="object-position:center 30%"></div>
-            <div class="team-info">
-              <h3>Zyle Estacion</h3>
-              <div class="team-role">Head of Annotation Labelling</div>
-              <a class="team-link" href="https://www.linkedin.com/in/zyle-estacion-20b662226/" target="_blank" rel="noopener noreferrer" aria-label="Zyle Estacion on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-            </div>
-          </article>
-                <article class="team-card reveal">
-            <div class="team-photo"><img src="assets/team-linn.jpg" alt="Linn Nyo, Head of QA and Cybersecurity" loading="lazy" style="object-position:center 25%"></div>
-            <div class="team-info">
-              <h3>Linn Nyo</h3>
-              <div class="team-role">Head of QA and Cybersecurity</div>
-              <a class="team-link" href="https://www.linkedin.com/in/linn-htin-nyo-2031a8306/" target="_blank" rel="noopener noreferrer" aria-label="Linn Nyo on LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-            </div>
-          </article>
         </div>
       </div>
     </div>
