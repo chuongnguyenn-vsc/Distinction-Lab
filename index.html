@@ -858,6 +858,38 @@
   #why .why-card p, #standards .why-card p{ font-size:19px; line-height:1.62; }
   #why .scene, #standards .scene{ height:170px; }
   @media (max-width:980px){ #why .why-card h3, #standards .why-card h3{ font-size:28px; } }
+
+  /* ---------- SERVICES: animated scenes ---------- */
+  .label-cell .scene{ margin:-6px -6px 22px; }
+  .label-cell:nth-child(5n+1){ --c:#ffc857; } .label-cell:nth-child(5n+2){ --c:#5ef2b0; } .label-cell:nth-child(5n+3){ --c:#6ec6ff; } .label-cell:nth-child(5n+4){ --c:#ff7a9c; } .label-cell:nth-child(5n+5){ --c:#ff9f5a; }
+  .label-cell.label-tile{ --c:#6ec6ff; display:flex; flex-direction:column; justify-content:center; background:linear-gradient(160deg,rgba(110,198,255,.12),rgba(255,255,255,.03)); }
+  .label-tile .scene-lg{ height:240px; margin-bottom:22px; }
+  .label-tile .tile-p{ color:var(--ink-soft); font-size:16px; line-height:1.6; }
+  .label-cell .scene{ height:150px; }
+  .abox{ animation:aBox 3.4s ease-in-out infinite; transform-origin:50% 50%; }
+  @keyframes aBox{ 0%{ transform:scale(.4); opacity:0;} 25%,85%{ transform:scale(1); opacity:1;} 100%{ transform:scale(1); opacity:0;} }
+  .acur{ animation:aCur 3.4s ease-in-out infinite; }
+  @keyframes aCur{ 0%{ transform:translate(-62px,-40px);} 30%{ transform:translate(0,0);} 85%{ transform:translate(0,0);} 100%{ transform:translate(-62px,-40px);} }
+  .abub{ animation:aBub 3.6s ease-in-out infinite; transform-origin:0 50%; }
+  .abub.b2{ animation-delay:.9s; transform-origin:100% 50%; }
+  @keyframes aBub{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-4px);} }
+  .atype{ animation:sTwinkle 1.2s ease-in-out infinite; animation-delay:calc(var(--i)*.2s); }
+  .asw{ animation:sFloat 2.4s ease-in-out infinite; }
+  .afall{ animation:aFall 2.4s ease-in infinite; animation-delay:calc(var(--i)*.3s); }
+  @keyframes aFall{ 0%{ transform:translate(0,0); opacity:0;} 15%{ opacity:1;} 100%{ transform:translate(calc(var(--x)*-1),60px) scale(.5); opacity:0;} }
+  .aout{ animation:aOut 2.4s ease-in-out infinite; animation-delay:calc(var(--i)*.3s + .8s); opacity:0; }
+  @keyframes aOut{ 0%{ opacity:0; transform:translateY(-6px);} 30%,80%{ opacity:1; transform:none;} 100%{ opacity:0;} }
+  .amag{ animation:aMag 4s ease-in-out infinite; }
+  @keyframes aMag{ 0%,100%{ transform:translateY(0);} 33%{ transform:translateY(26px);} 66%{ transform:translateY(52px);} }
+  .achk{ stroke-dasharray:40; animation:aChk 4s ease-in-out infinite; animation-delay:calc(var(--i)*1.2s); stroke-dashoffset:40; }
+  @keyframes aChk{ 0%,5%{ stroke-dashoffset:40;} 25%,100%{ stroke-dashoffset:0;} }
+  .aocore{ transform-origin:50% 50%; animation:sPulse 2s ease-in-out infinite; }
+  .apulse{ animation:aPulse 2.4s ease-in-out infinite; animation-delay:calc(var(--i)*.35s); }
+  @keyframes aPulse{ 0%{ transform:translate(0,0); opacity:0;} 15%{ opacity:1;} 85%{ opacity:1;} 100%{ transform:translate(var(--dx),var(--dy)); opacity:0;} }
+  .ann{ animation:sTwinkle 2.6s ease-in-out infinite; animation-delay:calc(var(--i)*.3s); transform-origin:50% 50%; }
+  .aflow{ animation:aFlow 3s linear infinite; animation-delay:calc(var(--i)*.9s); }
+  @keyframes aFlow{ 0%{ transform:translate(0,0); opacity:0;} 10%{ opacity:1;} 90%{ opacity:1;} 100%{ transform:translate(180px,-5px); opacity:0;} }
+  .label-cell .scene.scene-lg{ height:250px; }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1052,7 +1084,8 @@
     <div class="wrap" style="padding:0;">
       <div class="label-grid">
         <div class="label-cell">
-          <div class="icon-mark c-green"><svg viewBox="0 0 24 24" fill="none"><path d="M11.6 3.5h5.4a1 1 0 0 1 1 1v5.4a1 1 0 0 1-.3.7l-8 8a1 1 0 0 1-1.4 0l-5.5-5.5a1 1 0 0 1 0-1.4l8-8a1 1 0 0 1 .8-.2z" stroke-width="1.7"/><circle cx="14.6" cy="8.4" r="1.25" stroke-width="1.7"/></svg></div>
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><rect x="36" y="22" width="168" height="84" rx="10" fill="currentColor" fill-opacity=".08" stroke="currentColor" stroke-opacity=".4" stroke-width="2"/><path d="M52 92l30-34 24 24 20-18 42 28" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="2.5" stroke-linejoin="round"/><circle cx="170" cy="44" r="8" fill="currentColor" fill-opacity=".5"/><g class="abox"><rect x="78" y="46" width="62" height="46" rx="5" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="7 5"/><rect x="78" y="32" width="38" height="14" rx="7" fill="currentColor"/><text x="97" y="42.5" text-anchor="middle" font-size="9" font-weight="700" fill="#111">label</text></g><g class="acur"><path d="M150 84l16 7-7 3 5 8-4 2-5-8-5 5z" fill="#fff" stroke="#111" stroke-width="1.2"/></g></svg></div>
+                    <div class="icon-mark c-green"><svg viewBox="0 0 24 24" fill="none"><path d="M11.6 3.5h5.4a1 1 0 0 1 1 1v5.4a1 1 0 0 1-.3.7l-8 8a1 1 0 0 1-1.4 0l-5.5-5.5a1 1 0 0 1 0-1.4l8-8a1 1 0 0 1 .8-.2z" stroke-width="1.7"/><circle cx="14.6" cy="8.4" r="1.25" stroke-width="1.7"/></svg></div>
           <div class="tag-row"><span class="tag-mono">AI DATA OPERATIONS</span><span class="idx-mono">01</span></div>
           <h4>Data Annotation & Labeling</h4>
           <ul>
@@ -1063,7 +1096,8 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-blue"><svg viewBox="0 0 24 24" fill="none"><path d="M7 9h9" stroke-width="1.8"/><path d="M13.5 5.5L17 9l-3.5 3.5" stroke-width="1.8"/><path d="M17 15H8" stroke-width="1.8"/><path d="M10.5 18.5L7 15l3.5-3.5" stroke-width="1.8"/></svg></div>
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g class="abub"><rect x="24" y="18" width="100" height="34" rx="14" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="2.5"/><text x="46" y="40" font-size="14" font-weight="700" fill="currentColor">A</text><path d="M62 35h48" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".6"/></g><g class="abub b2"><rect x="116" y="62" width="100" height="34" rx="14" fill="currentColor" stroke="currentColor" stroke-width="2.5"/><text x="138" y="84" font-size="14" font-weight="700" fill="#111">B</text><path d="M154 79h46" stroke="#111" stroke-width="3" stroke-linecap="round" opacity=".6"/></g><g fill="currentColor"><circle class="atype" style="--i:0" cx="30" cy="84" r="4"/><circle class="atype" style="--i:1" cx="42" cy="84" r="4"/><circle class="atype" style="--i:2" cx="54" cy="84" r="4"/></g><path class="asw" d="M176 28l8 -8 8 8M184 20v22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="icon-mark c-blue"><svg viewBox="0 0 24 24" fill="none"><path d="M7 9h9" stroke-width="1.8"/><path d="M13.5 5.5L17 9l-3.5 3.5" stroke-width="1.8"/><path d="M17 15H8" stroke-width="1.8"/><path d="M10.5 18.5L7 15l3.5-3.5" stroke-width="1.8"/></svg></div>
           <div class="tag-row"><span class="tag-mono">LLM DATA</span><span class="idx-mono">02</span></div>
           <h4>Human-Led Model Evaluation</h4>
           <ul>
@@ -1074,7 +1108,8 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16l-6.2 7.4v5.4l-3.6 1.7v-7.1z" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path d="M70 44H170L136 82V102H104V82Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><g fill="currentColor"><circle class="afall" style="--i:0;--x:-18px" cx="96" cy="16" r="5"/><circle class="afall" style="--i:1;--x:0px" cx="120" cy="12" r="5"/><circle class="afall" style="--i:2;--x:18px" cx="146" cy="16" r="5"/><rect class="aout" style="--i:0" x="104" y="106" width="9" height="9" rx="2"/><rect class="aout" style="--i:1" x="117" y="106" width="9" height="9" rx="2"/><rect class="aout" style="--i:2" x="130" y="106" width="9" height="9" rx="2"/></g></svg></div>
+                    <div class="icon-mark c-teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16l-6.2 7.4v5.4l-3.6 1.7v-7.1z" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
           <div class="tag-row"><span class="tag-mono">DATA PREPARATION</span><span class="idx-mono">03</span></div>
           <h4>Data Curation & Preparation</h4>
           <ul>
@@ -1085,7 +1120,8 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2l7 3v5.3c0 4.6-3 7.7-7 8.9-4-1.2-7-4.3-7-8.9v-5.3z" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.7 12.3l2.1 2.1 4.3-4.4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><rect x="30" y="24" width="120" height="12" rx="6" opacity=".25"/><rect x="30" y="50" width="120" height="12" rx="6" opacity=".25"/><rect x="30" y="76" width="120" height="12" rx="6" opacity=".25"/></g><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path class="achk" style="--i:0" d="M168 26l7 7 13-14"/><path class="achk" style="--i:1" d="M168 52l7 7 13-14"/><path class="achk" style="--i:2" d="M168 78l7 7 13-14"/></g><g class="amag"><circle cx="70" cy="44" r="20" fill="currentColor" fill-opacity=".12" stroke="currentColor" stroke-width="4"/><path d="M85 59l18 18" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g></svg></div>
+                    <div class="icon-mark c-amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2l7 3v5.3c0 4.6-3 7.7-7 8.9-4-1.2-7-4.3-7-8.9v-5.3z" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.7 12.3l2.1 2.1 4.3-4.4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="tag-row"><span class="tag-mono">QUALITY ASSURANCE</span><span class="idx-mono">04</span></div>
           <h4>Data Quality & QA</h4>
           <ul>
@@ -1096,19 +1132,9 @@
           </ul>
         </div>
         <div class="label-cell">
-          <div class="icon-mark c-slate"><svg viewBox="0 0 24 24" fill="none"><path d="M4.5 19V11" stroke-width="1.8" stroke-linecap="round"/><path d="M10.5 19V5" stroke-width="1.8" stroke-linecap="round"/><path d="M16.5 19v-7.5" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-          <div class="tag-row"><span class="tag-mono">MODEL EVALUATION</span><span class="idx-mono">05</span></div>
-          <h4>Human-Led Model Evaluation</h4>
-          <ul>
-            <li><b>Response Evaluation:</b> Assess model outputs against defined criteria.</li>
-            <li><b>Preference Testing:</b> Compare competing model responses.</li>
-            <li><b>Evaluation Dataset Creation:</b> Build evaluation datasets and benchmarks.</li>
-            <li><b>Continuous Evaluation:</b> Monitor model performance as it evolves.</li>
-          </ul>
-        </div>
-        <div class="label-cell">
-          <div class="icon-mark c-rust"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8.2" r="2.9" stroke-width="1.7"/><path d="M3.3 19.2c0-3.2 2.6-5.4 5.7-5.4s5.7 2.2 5.7 5.4" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.3" cy="9" r="2.15" stroke-width="1.7"/><path d="M15 14.3c2.7.1 4.9 2 5.1 4.9" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-          <div class="tag-row"><span class="tag-mono">MANAGED DATA OPERATIONS</span><span class="idx-mono">06</span></div>
+          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".45" stroke-width="2"><path d="M120 60L50 30M120 60L190 30M120 60L50 92M120 60L190 92"/></g><g fill="currentColor"><circle cx="50" cy="30" r="11" fill-opacity=".6"/><circle cx="190" cy="30" r="11" fill-opacity=".6"/><circle cx="50" cy="92" r="11" fill-opacity=".6"/><circle cx="190" cy="92" r="11" fill-opacity=".6"/><circle class="aocore" cx="120" cy="60" r="18"/></g><text x="120" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#111">DL</text><g fill="#fff"><circle class="apulse" style="--dx:-70px;--dy:-30px;--i:0" cx="120" cy="60" r="3.5"/><circle class="apulse" style="--dx:70px;--dy:-30px;--i:1" cx="120" cy="60" r="3.5"/><circle class="apulse" style="--dx:-70px;--dy:32px;--i:2" cx="120" cy="60" r="3.5"/><circle class="apulse" style="--dx:70px;--dy:32px;--i:3" cx="120" cy="60" r="3.5"/></g></svg></div>
+                    <div class="icon-mark c-rust"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8.2" r="2.9" stroke-width="1.7"/><path d="M3.3 19.2c0-3.2 2.6-5.4 5.7-5.4s5.7 2.2 5.7 5.4" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.3" cy="9" r="2.15" stroke-width="1.7"/><path d="M15 14.3c2.7.1 4.9 2 5.1 4.9" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <div class="tag-row"><span class="tag-mono">MANAGED DATA OPERATIONS</span><span class="idx-mono">05</span></div>
           <h4>Your Dedicated AI Data Team</h4>
           <ul>
             <li><b>Team Setup:</b> Trained teams built around your requirements.</li>
@@ -1116,6 +1142,16 @@
             <li><b>Quality Management:</b> Dedicated QA throughout the workflow.</li>
             <li><b>Scalable Capacity:</b> Increase or reduce capacity as your needs change.</li>
           </ul>
+        </div>
+        <div class="label-cell label-tile" style="--c:#6ec6ff">
+          <div class="scene scene-lg" aria-hidden="true"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".35" stroke-width="2"><path d="M40 50L110 40M40 50L110 90M40 120L110 40M40 120L110 90M40 120L110 150M40 190L110 90M40 190L110 150M40 190L110 200M40 50L110 150"/><path d="M110 40L180 80M110 90L180 80M110 90L180 150M110 150L180 80M110 150L180 150M110 200L180 150M110 40L180 150M110 200L180 80"/><path d="M180 80L220 115M180 150L220 115"/></g>
+            <g fill="currentColor"><circle cx="40" cy="50" r="8"/><circle cx="40" cy="120" r="8"/><circle cx="40" cy="190" r="8"/><circle class="ann" style="--i:0" cx="110" cy="40" r="9"/><circle class="ann" style="--i:1" cx="110" cy="90" r="9"/><circle class="ann" style="--i:2" cx="110" cy="150" r="9"/><circle class="ann" style="--i:3" cx="110" cy="200" r="9"/><circle class="ann" style="--i:4" cx="180" cy="80" r="9"/><circle class="ann" style="--i:5" cx="180" cy="150" r="9"/><circle class="aocore" cx="220" cy="115" r="12"/></g>
+            <g fill="#fff"><circle class="aflow" style="--i:0" cx="40" cy="120" r="3.5"/><circle class="aflow" style="--i:1" cx="40" cy="50" r="3.5"/><circle class="aflow" style="--i:2" cx="40" cy="190" r="3.5"/></g>
+          </svg></div>
+          <div class="tag-row"><span class="tag-mono">LIVE PIPELINE</span><span class="idx-mono">∞</span></div>
+          <h4>Human-in-the-loop, end to end</h4>
+          <p class="tile-p">Every item moves from annotation to QA to delivery with people checking each step — so quality is built in, not bolted on.</p>
         </div>
       </div>
     </div>
