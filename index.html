@@ -840,6 +840,25 @@
   @keyframes sStream{ to{ stroke-dashoffset:-11;} }
   .sswing{ transform-origin:50% 0; animation:sSwing 3s ease-in-out infinite; }
   @keyframes sSwing{ 0%,100%{ transform:rotate(-6deg);} 50%{ transform:rotate(6deg);} }
+
+  /* ---------- ABOUT: intro video left ---------- */
+  .about-inner{ grid-template-columns:minmax(260px,360px) 1fr; gap:64px; align-items:center; }
+  .about-video{ position:relative; width:100%; max-width:360px; justify-self:center; border-radius:28px; overflow:hidden; background:#000;
+    border:1px solid rgba(255,255,255,.22); box-shadow:0 0 0 1px rgba(255,255,255,.04), 0 24px 60px rgba(0,0,0,.6), 0 0 60px rgba(242,207,216,.12); }
+  .about-video video{ display:block; width:100%; aspect-ratio:9/16; object-fit:cover; background:#000; }
+  .about-text .lede{ margin-bottom:28px; }
+  @media (max-width:860px){ .about-inner{ grid-template-columns:1fr; gap:34px; } .about-video{ max-width:320px; } }
+
+  /* ---------- ONE ACCENT: soft blush from the landing video ---------- */
+  .c-gold,.c-mint,.c-sky,.c-rose,.c-orange{ --c:#f2cfd8; }
+  .label-cell:nth-child(n), .p-row:nth-child(n){ --c:#f2cfd8; }
+  .section-head h2 em, .cta-banner h2 em, .about-inner .lede em, .vm-cell p.big em{
+    background:none; -webkit-text-fill-color:currentColor; -webkit-background-clip:border-box; background-clip:border-box; color:#f2cfd8;
+  }
+  .sys-tag, .footer-col h5{ color:#f2cfd8; }
+  .section-head p{ color:#dcdcdc; }
+  .testimonial-card .t-role{ color:#f2cfd8 !important; }
+  .pricing-col.highlight h3{ color:#fff; }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1106,40 +1125,19 @@
   <!-- ABOUT -->
   <section>
     <div class="wrap about-inner">
-      <div>
+      <div class="about-video">
+        <video controls playsinline preload="metadata" poster="assets/intro-poster.jpg">
+          <source src="assets/intro.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="about-text">
         <div class="eyebrow">About Distinction Lab</div>
         <p class="lede">Your dedicated data operations department — <em>without the department.</em></p>
-        <svg class="network-deco" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g stroke="#8a8a8a" stroke-width="1.2" opacity="0.55">
-            <line x1="40" y1="40" x2="150" y2="30"/>
-            <line x1="150" y1="30" x2="260" y2="55"/>
-            <line x1="150" y1="30" x2="120" y2="120"/>
-            <line x1="40" y1="40" x2="60" y2="140"/>
-            <line x1="60" y1="140" x2="120" y2="120"/>
-            <line x1="120" y1="120" x2="220" y2="150"/>
-            <line x1="220" y1="150" x2="260" y2="55"/>
-            <line x1="60" y1="140" x2="150" y2="195"/>
-            <line x1="150" y1="195" x2="220" y2="150"/>
-          </g>
-          <g fill="#e8e8e8">
-            <circle cx="40" cy="40" r="5"/>
-            <circle cx="150" cy="30" r="6"/>
-            <circle cx="260" cy="55" r="5"/>
-            <circle cx="120" cy="120" r="7"/>
-            <circle cx="60" cy="140" r="5"/>
-            <circle cx="220" cy="150" r="5"/>
-            <circle cx="150" cy="195" r="6"/>
-          </g>
-          <g fill="#000000">
-            <circle cx="120" cy="120" r="3"/>
-            <circle cx="150" cy="30" r="2.5"/>
-          </g>
-        </svg>
-      </div>
-      <div class="body">
+        <div class="body">
         <p>Distinction Lab is a managed AI data operations company helping AI startups and SMEs produce, prepare, and evaluate the data behind their models. We handle data annotation, data preparation, human feedback, evaluation, and quality assurance through trained teams and structured workflows.</p>
         <p>Instead of hiring, training, and managing an in-house data team, clients can rely on us to manage the operational work — from project setup and annotation to quality control and final delivery.</p>
         <p>You build the AI. We manage the data operation behind it.</p>
+        </div>
       </div>
     </div>
   </section>
