@@ -849,16 +849,15 @@
   .about-text .lede{ margin-bottom:28px; }
   @media (max-width:860px){ .about-inner{ grid-template-columns:1fr; gap:34px; } .about-video{ max-width:320px; } }
 
-  /* ---------- ONE ACCENT: soft blush from the landing video ---------- */
-  .c-gold,.c-mint,.c-sky,.c-rose,.c-orange{ --c:#f2cfd8; }
-  .label-cell:nth-child(n), .p-row:nth-child(n){ --c:#f2cfd8; }
-  .section-head h2 em, .cta-banner h2 em, .about-inner .lede em, .vm-cell p.big em{
-    background:none; -webkit-text-fill-color:currentColor; -webkit-background-clip:border-box; background-clip:border-box; color:#f2cfd8;
-  }
-  .sys-tag, .footer-col h5{ color:#f2cfd8; }
-  .section-head p{ color:#dcdcdc; }
-  .testimonial-card .t-role{ color:#f2cfd8 !important; }
-  .pricing-col.highlight h3{ color:#fff; }
+  /* ---------- WHY SECTIONS: larger text ---------- */
+  #why .section-head h2, #standards .section-head h2{ font-size:clamp(34px,4.3vw,60px); }
+  #why .section-head p, #standards .section-head p{ font-size:20px; line-height:1.6; max-width:52ch; }
+  #why .why-card, #standards .why-card{ padding:36px 30px; }
+  #why .why-card .num, #standards .why-card .num{ font-size:15px; padding:10px 20px; }
+  #why .why-card h3, #standards .why-card h3{ font-size:30px; line-height:1.2; }
+  #why .why-card p, #standards .why-card p{ font-size:19px; line-height:1.62; }
+  #why .scene, #standards .scene{ height:170px; }
+  @media (max-width:980px){ #why .why-card h3, #standards .why-card h3{ font-size:28px; } }
 </style>
 </head>
 <body style="background:#000;color:#fff">
