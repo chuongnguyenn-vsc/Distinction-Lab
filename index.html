@@ -1012,6 +1012,8 @@
   .ty{ transform-box:fill-box; transform-origin:0 50%; animation:tyGrow 6s ease-out infinite; animation-delay:calc(var(--i)*.8s); }
   @keyframes tyGrow{ 0%{ transform:scaleX(0);} 40%,90%{ transform:scaleX(1);} 100%{ transform:scaleX(0);} }
   .rec{ animation:sTwinkle 1.2s ease-in-out infinite; }
+  .social-li{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; margin-top:20px; border-radius:50%; background:#fff; color:#0a0a0a; font-size:18px; transition:transform .2s ease, background .2s ease; }
+  .social-li:hover{ transform:translateY(-2px); background:#ffe566; }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1523,7 +1525,7 @@
           </div>
           <div class="fb-actions">
             <button type="submit" class="btn btn-solid">Send Feedback</button>
-            <span class="fb-hint">Opens your email app, addressed to hello@distinctionlab.ai</span>
+            <span class="fb-hint">Opens your email app, addressed to contact@distinctionlab.info</span>
           </div>
         </form>
       </div>
@@ -1623,8 +1625,8 @@
     <h2>Stop managing labelers.<br>Start <em>shipping models.</em></h2>
     <p>Send your first 100 items — free — and see what a real data operations team looks like.</p>
     <div class="hero-cta">
-      <a href="mailto:hello@distinctionlab.ai" class="btn on-dark">Start Your Free Trial</a>
-      <a href="mailto:hello@distinctionlab.ai" class="btn ghost">Talk to Our Team</a>
+      <a href="mailto:contact@distinctionlab.info" class="btn on-dark">Start Your Free Trial</a>
+      <a href="mailto:contact@distinctionlab.info" class="btn ghost">Talk to Our Team</a>
     </div>
   </div>
 </div>
@@ -1635,6 +1637,7 @@
       <div class="footer-brand">
         <a href="#top" class="logo"><span class="mark"><img src="assets/logo.png" alt="Distinction Lab logo"></span>Distinction<span class="logo-suffix"> Lab</span></a>
         <p>Your AI data team, on autopilot. We run annotation, labeling, and RLHF alignment so ambitious AI teams can focus on building.</p>
+        <a class="social-li" href="https://www.linkedin.com/company/distinction-lab/" target="_blank" rel="noopener" aria-label="Distinction Lab on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -1656,7 +1659,8 @@
       <div class="footer-col">
         <h5>Get Started</h5>
         <a href="#trial">Free 100-Item Trial</a>
-        <a href="mailto:hello@distinctionlab.ai">hello@distinctionlab.ai</a>
+        <a href="mailto:contact@distinctionlab.info">contact@distinctionlab.info</a>
+        <a href="https://www.linkedin.com/company/distinction-lab/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1744,7 +1748,7 @@
       e.preventDefault();
       var g=function(id){ return document.getElementById(id).value.trim(); };
       var body='Name: '+g('fbName')+'\nRole & company: '+g('fbRole')+'\nRating: '+g('fbRating')+'\n\nComments:\n'+g('fbComment');
-      window.location.href='mailto:hello@distinctionlab.ai?subject='+encodeURIComponent('Client feedback — '+g('fbName'))+'&body='+encodeURIComponent(body);
+      window.location.href='mailto:contact@distinctionlab.info?subject='+encodeURIComponent('Client feedback — '+g('fbName'))+'&body='+encodeURIComponent(body);
     });
   })();
 </script>
