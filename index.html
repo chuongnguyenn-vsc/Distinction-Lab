@@ -130,7 +130,7 @@
     background:rgba(0,0,0,.6); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
     border-bottom-color:var(--border-soft);
   }
-  .header-row{ display:flex; align-items:center; justify-content:center; width:100%; max-width:900px; gap:clamp(18px,2.8vw,30px); }
+  .header-row{ display:flex; align-items:center; justify-content:center; width:100%; max-width:1320px; gap:clamp(14px,2vw,26px); }
   .lp-logo{
     flex:none; display:grid; place-items:center; width:clamp(48px,5.4vw,60px); height:clamp(48px,5.4vw,60px);
     border-radius:50%; background:#fff; box-shadow:var(--nav-shadow); transition:transform .3s ease;
@@ -138,12 +138,12 @@
   .lp-logo:hover{ transform:scale(1.04); }
   .lp-logo img{ width:72%; height:72%; object-fit:contain; border-radius:6px; display:block; }
   .lp-nav{
-    display:flex; align-items:center; justify-content:space-between; flex:1; max-width:580px;
+    display:flex; align-items:center; justify-content:space-between; flex:1; max-width:1000px;
     height:clamp(54px,6.2vw,64px); padding:5px 10px; border-radius:999px; background:#fff; box-shadow:var(--nav-shadow);
   }
   .lp-nav a{
-    position:relative; padding:0 clamp(10px,1.5vw,18px); height:100%; display:inline-flex; align-items:center;
-    font-size:clamp(15px,1.7vw,19px); font-weight:500; letter-spacing:-.01em; color:var(--nav-text);
+    position:relative; padding:0 clamp(7px,.85vw,13px); height:100%; display:inline-flex; align-items:center;
+    font-size:clamp(13px,1.1vw,16px); font-weight:500; letter-spacing:-.01em; color:var(--nav-text);
     opacity:.5; transition:opacity .25s ease; white-space:nowrap;
   }
   .lp-nav a:hover{ opacity:.75; }
@@ -313,6 +313,30 @@
     .lp-h1{ letter-spacing:-.08em; line-height:1.05; font-size:clamp(30px,9.4vw,60px); }
     .lp-stats{ grid-template-columns:repeat(2,1fr); gap:20px 12px; }
   }
+  @media (max-width:1240px){
+    .header{ padding-top:max(16px, env(safe-area-inset-top)); }
+    .header-row{ justify-content:space-between; max-width:none; }
+    .lp-logo{ width:56px; height:56px; }
+    .signin{ display:none; }
+    .burger{ display:grid; }
+    .menu-backdrop{
+      display:block; position:fixed; inset:0; z-index:40; background:rgba(0,0,0,.62);
+      -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+      opacity:0; visibility:hidden; transition:opacity .28s ease, visibility .28s ease;
+    }
+    body.menu-open .menu-backdrop{ opacity:1; visibility:visible; }
+    .lp-nav{
+      position:fixed; z-index:45; top:calc(max(16px, env(safe-area-inset-top)) + 62px); left:14px; right:14px; max-width:none; height:auto;
+      flex-direction:column; align-items:stretch; gap:4px; padding:22px 18px 20px; border-radius:28px;
+      box-shadow:0 20px 60px rgba(0,0,0,.45); opacity:0; visibility:hidden; transform:translateY(-10px) scale(.98);
+      transition:opacity .38s ease, transform .38s ease, visibility .38s ease;
+    }
+    body.menu-open .lp-nav{ opacity:1; visibility:visible; transform:none; }
+    body.menu-open{ overflow:hidden; }
+    .lp-nav a{ height:48px; justify-content:center; font-size:17px; padding:0; }
+    .lp-nav a.active::after{ bottom:8px; }
+    .lp-nav .nav-signin-m{ display:flex; margin-top:8px; background:var(--pill-dark); color:var(--sign-in-text); opacity:1; border-radius:999px; }
+  }
   @media (max-width:420px){
     .lp-h1{ letter-spacing:-.09em; line-height:1.04; }
     .trust{ --trust-size:34px; }
@@ -346,7 +370,7 @@
   /* ---------- SECTION GENERIC ---------- */
   section{
     padding:104px 0; border-bottom:1px solid var(--line);
-    scroll-margin-top:72px; position:relative; overflow:hidden;
+    scroll-margin-top:104px; position:relative; overflow:hidden;
   }
   section::before{
     content:""; position:absolute; top:-140px; right:-140px; width:560px; height:560px; z-index:0; pointer-events:none;
@@ -404,11 +428,12 @@
     display:grid; grid-template-columns:repeat(4,1fr);
     border-top:1px solid var(--line); border-left:1px solid var(--line);
   }
-  #why .why-grid{ grid-template-columns:repeat(6,1fr); }
+  #why .why-grid{ grid-template-columns:repeat(6,1fr); grid-auto-rows:1fr; }
   #why .why-grid .why-card{ grid-column:span 2; }
-  #why .why-grid .why-card:nth-child(n+4){ grid-column:span 3; }
-  @media (max-width:980px){ .why-grid, #why .why-grid{ grid-template-columns:repeat(2,1fr); } #why .why-grid .why-card, #why .why-grid .why-card:nth-child(n+4){ grid-column:auto; } #why .why-grid .why-card:last-child{ grid-column:1 / -1; } }
-  @media (max-width:600px){ .why-grid, #why .why-grid{ grid-template-columns:1fr; } #why .why-grid .why-card:last-child{ grid-column:auto; } }
+  #why .why-grid .why-card:nth-child(4){ grid-column:2 / span 2; }
+  #why .why-grid .why-card:nth-child(5){ grid-column:4 / span 2; }
+  @media (max-width:980px){ .why-grid, #why .why-grid{ grid-template-columns:repeat(2,1fr); } #why .why-grid .why-card, #why .why-grid .why-card:nth-child(4), #why .why-grid .why-card:nth-child(5){ grid-column:auto; } #why .why-grid .why-card:last-child{ grid-column:1 / -1; justify-self:center; width:calc(50% - 8px); } }
+  @media (max-width:600px){ .why-grid, #why .why-grid{ grid-template-columns:1fr; } #why .why-grid .why-card:last-child{ grid-column:auto; width:auto; justify-self:stretch; } }
   .why-card{
     position:relative; padding:34px 28px; background:transparent;
     border-right:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -1023,9 +1048,15 @@
     <a href="#top" class="lp-logo" aria-label="Distinction Lab"><img src="assets/logo.png" alt="" width="52" height="52"></a>
     <nav class="lp-nav" id="site-nav" aria-label="Primary">
       <a href="#top" class="active">Home</a>
-      <a href="#how">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#vision">Vision</a>
+      <a href="#why">Why Us</a>
       <a href="#label">Services</a>
+      <a href="#how">How It Works</a>
       <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
       <a href="#trial" class="nav-signin-m">Start Free Trial</a>
     </nav>
     <a href="#trial" class="signin">Start Free Trial</a>
@@ -1074,7 +1105,7 @@
   </div>
 
   <!-- ABOUT -->
-  <section>
+  <section id="about">
     <div class="wrap about-inner">
       <div class="about-video">
         <video controls playsinline preload="metadata" poster="assets/intro-poster.jpg">
@@ -1714,6 +1745,20 @@
       var body='Name: '+g('fbName')+'\nRole & company: '+g('fbRole')+'\nRating: '+g('fbRating')+'\n\nComments:\n'+g('fbComment');
       window.location.href='mailto:contact@distinctionlab.info?subject='+encodeURIComponent('Client feedback — '+g('fbName'))+'&body='+encodeURIComponent(body);
     });
+  })();
+
+  // Highlight the nav link of the section in view
+  (function(){
+    var links=[].slice.call(document.querySelectorAll('#site-nav a[href^="#"]:not(.nav-signin-m)'));
+    var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+    var ids=Object.keys(map).filter(function(id){ return document.getElementById(id); });
+    function set(id){ links.forEach(function(a){ a.classList.toggle('active', a===map[id]); }); }
+    function onScroll(){
+      var y=window.scrollY+140, cur='top';
+      ids.forEach(function(id){ var el=document.getElementById(id); if(el.getBoundingClientRect().top+window.scrollY<=y) cur=id; });
+      set(cur);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
   })();
 </script>
 
