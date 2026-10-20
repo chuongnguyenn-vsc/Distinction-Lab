@@ -404,8 +404,11 @@
     display:grid; grid-template-columns:repeat(4,1fr);
     border-top:1px solid var(--line); border-left:1px solid var(--line);
   }
-  @media (max-width:980px){ .why-grid{ grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:600px){ .why-grid{ grid-template-columns:1fr; } }
+  #why .why-grid{ grid-template-columns:repeat(6,1fr); }
+  #why .why-grid .why-card{ grid-column:span 2; }
+  #why .why-grid .why-card:nth-child(n+4){ grid-column:span 3; }
+  @media (max-width:980px){ .why-grid, #why .why-grid{ grid-template-columns:repeat(2,1fr); } #why .why-grid .why-card, #why .why-grid .why-card:nth-child(n+4){ grid-column:auto; } #why .why-grid .why-card:last-child{ grid-column:1 / -1; } }
+  @media (max-width:600px){ .why-grid, #why .why-grid{ grid-template-columns:1fr; } #why .why-grid .why-card:last-child{ grid-column:auto; } }
   .why-card{
     position:relative; padding:34px 28px; background:transparent;
     border-right:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -850,14 +853,14 @@
   @media (max-width:860px){ .about-inner{ grid-template-columns:1fr; gap:34px; } .about-video{ max-width:320px; } }
 
   /* ---------- WHY SECTIONS: larger text ---------- */
-  #why .section-head h2, #standards .section-head h2{ font-size:clamp(34px,4.3vw,60px); }
-  #why .section-head p, #standards .section-head p{ font-size:20px; line-height:1.6; max-width:52ch; }
-  #why .why-card, #standards .why-card{ padding:36px 30px; }
-  #why .why-card .num, #standards .why-card .num{ font-size:15px; padding:10px 20px; }
-  #why .why-card h3, #standards .why-card h3{ font-size:30px; line-height:1.2; }
-  #why .why-card p, #standards .why-card p{ font-size:19px; line-height:1.62; }
-  #why .scene, #standards .scene{ height:170px; }
-  @media (max-width:980px){ #why .why-card h3, #standards .why-card h3{ font-size:28px; } }
+  #why .section-head h2{ font-size:clamp(34px,4.3vw,60px); }
+  #why .section-head p{ font-size:20px; line-height:1.6; max-width:52ch; }
+  #why .why-card{ padding:36px 30px; }
+  #why .why-card .num{ font-size:15px; padding:10px 20px; }
+  #why .why-card h3{ font-size:30px; line-height:1.2; }
+  #why .why-card p{ font-size:19px; line-height:1.62; }
+  #why .scene{ height:170px; }
+  @media (max-width:980px){ #why .why-card h3{ font-size:28px; } }
 
   /* ---------- SERVICES: animated scenes ---------- */
   .label-cell .scene{ margin:-6px -6px 22px; }
@@ -963,12 +966,6 @@
   .team-grid{ grid-template-columns:repeat(4,1fr); gap:16px; }
   @media (max-width:1100px){ .team-grid{ grid-template-columns:repeat(2,1fr); max-width:760px; margin:0 auto; } }
   @media (max-width:560px){ .team-grid{ grid-template-columns:1fr; max-width:420px; } }
-  /* ---------- STANDARDS hooks (same as Why Us) ---------- */
-  #standards .why-card h3.hook{ font-size:clamp(30px,2.7vw,40px); line-height:1.1; letter-spacing:-.04em; margin-bottom:14px; color:#fff; }
-  #standards .why-card h3.hook em{ font-style:normal; font-family:var(--font-display); font-weight:400; letter-spacing:-.02em; color:var(--c); text-shadow:0 0 24px color-mix(in srgb, var(--c) 50%, transparent); }
-  #standards .why-card p.hook-p{ font-size:19px; line-height:1.45; color:#e8e8e8; }
-  #standards .why-card:hover h3.hook{ color:#fff; }
-  #standards .scene{ height:190px; }
   /* portrait Canva embed */
   .team-video{ max-width:400px; }
   .team-video-head{ justify-content:center; }
@@ -1147,44 +1144,11 @@
           <h3 class="hook">Try <em>100 items</em> free</h3>
           <p class="hook-p">See our quality before you pay a cent.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE DISTINCTION LAB -->
-  <section id="standards">
-    <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 02 ]</span><span>Standards</span></div>
-      <div class="section-head">
-        <h2>Why choose <em>Distinction Lab</em></h2>
-        <p>Enterprise-grade rigor. Startup speed. Pricing you can plan around.</p>
-      </div>
-    </div>
-    <div class="wrap" style="padding:0;">
-      <div class="why-grid">
-        <div class="why-card c-mint">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 5"><rect class="sbox" style="--i:0" x="30" y="34" width="50" height="46" rx="6"/><rect class="sbox" style="--i:1" x="96" y="48" width="48" height="48" rx="6"/><rect class="sbox" style="--i:2" x="160" y="26" width="48" height="54" rx="6"/></g><g fill="currentColor"><rect x="30" y="22" width="30" height="11" rx="5"/><rect x="96" y="36" width="30" height="11" rx="5"/><rect x="160" y="14" width="30" height="11" rx="5"/></g><rect class="sscan" x="14" y="8" width="3" height="104" rx="2" fill="currentColor"/></svg></div>
-          <div class="num mono">ACCURACY</div>
-          <h3 class="hook"><em>&gt;98%</em> label accuracy</h3>
-          <p class="hook-p">Dual-layer QA on every batch.</p>
-        </div>
-        <div class="why-card c-orange">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path d="M20 90H220" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 7" stroke-linecap="round" opacity=".6"/><g fill="currentColor"><rect class="smove" style="--i:0" x="24" y="64" width="22" height="22" rx="5"/><rect class="smove" style="--i:1" x="24" y="64" width="22" height="22" rx="5"/><rect class="smove" style="--i:2" x="24" y="64" width="22" height="22" rx="5"/></g><rect x="170" y="42" width="48" height="48" rx="8" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="3"/><path class="sdraw2" d="M182 66l9 9 15-18" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="num mono">DELIVERY</div>
-          <h3 class="hook"><em>Fast shipment,</em> every batch</h3>
-          <p class="hook-p">Clean data in your hands in 2-5 days. On schedule.</p>
-        </div>
         <div class="why-card c-sky">
           <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle class="sring2" style="--i:0" cx="120" cy="64" r="30"/><circle class="sring2" style="--i:1" cx="120" cy="64" r="30"/></g><path d="M20 64H84M156 64H220" stroke="currentColor" stroke-width="3" stroke-dasharray="3 8" stroke-linecap="round" class="sstream"/><path d="M104 56V46a16 16 0 0 1 32 0V56" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="92" y="54" width="56" height="44" rx="9" fill="currentColor"/><circle cx="120" cy="72" r="6" fill="#111"/><rect x="117" y="75" width="6" height="12" rx="3" fill="#111"/></svg></div>
           <div class="num mono">PRIVACY</div>
           <h3 class="hook">Your data stays <em>yours</em></h3>
           <p class="hook-p">End-to-end encryption. Stream-only workspaces.</p>
-        </div>
-        <div class="why-card c-gold">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g class="sswing"><path d="M66 36H132L176 76L132 116H66Z" transform="translate(0 -12)" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="64" r="6" fill="none" stroke="currentColor" stroke-width="3"/><text x="120" y="76" text-anchor="middle" font-size="30" font-weight="700" fill="currentColor">$</text></g><g fill="currentColor"><circle class="sdot" style="--i:0" cx="30" cy="30" r="5"/><circle class="sdot" style="--i:1" cx="212" cy="38" r="5"/><circle class="sdot" style="--i:2" cx="206" cy="96" r="5"/></g></svg></div>
-          <div class="num mono">PRICING</div>
-          <h3 class="hook"><em>Zero</em> hidden fees</h3>
-          <p class="hook-p">Simple, predictable rates. No minimums.</p>
         </div>
       </div>
     </div>
@@ -1193,7 +1157,7 @@
   <!-- WHAT WE LABEL -->
   <section id="label">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 03 ]</span><span>Coverage</span></div>
+      <div class="sys-tag"><span class="idx">[ 02 ]</span><span>Coverage</span></div>
       <div class="section-head">
         <h2>Our <em>Services</em></h2>
         <p>Managed data operations across the AI development lifecycle.</p>
@@ -1320,7 +1284,7 @@
   <!-- HOW IT WORKS -->
   <section id="how">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 04 ]</span><span>Pipeline</span></div>
+      <div class="sys-tag"><span class="idx">[ 03 ]</span><span>Pipeline</span></div>
       <div class="section-head">
         <h2>How your data moves <em>through the lab</em></h2>
         <p>One pipeline, four checkpoints. Every item is annotated twice, reconciled, and audited before it reaches your dataset.</p>
@@ -1405,7 +1369,7 @@
   <!-- PRICING -->
   <section id="pricing">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 05 ]</span><span>Pricing</span></div>
+      <div class="sys-tag"><span class="idx">[ 04 ]</span><span>Pricing</span></div>
       <div class="section-head">
         <h2>Pricing built to beat <em>building in-house</em></h2>
         <p>Project-based pricing, scoped to your dataset and timeline — no per-seat licenses, no annual lock-in, no idle headcount.</p>
@@ -1450,7 +1414,7 @@
   <!-- TESTIMONIALS -->
   <section id="testimonials">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 06 ]</span><span>Feedback</span></div>
+      <div class="sys-tag"><span class="idx">[ 05 ]</span><span>Feedback</span></div>
       <div class="section-head">
         <h2>What founders say after <em>working with us</em></h2>
         <p>Real feedback from teams who handed us their data pipeline — in their own words.</p>
@@ -1535,7 +1499,7 @@
   <!-- TEAM -->
   <section id="team">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 07 ]</span><span>The people behind the lab</span></div>
+      <div class="sys-tag"><span class="idx">[ 06 ]</span><span>The people behind the lab</span></div>
       <div class="section-head">
         <h2>Meet <em>Your Team</em></h2>
         <p>The people who run your data operation, from first guideline to final delivery.</p>
@@ -1587,7 +1551,7 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
-      <div class="sys-tag"><span class="idx">[ 08 ]</span><span>FAQ</span></div>
+      <div class="sys-tag"><span class="idx">[ 07 ]</span><span>FAQ</span></div>
       <div class="section-head" style="margin-bottom:20px;">
         <h2>Questions <em>founders ask</em></h2>
         <p>If yours isn't here, ask us directly — a real person answers.</p>
