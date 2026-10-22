@@ -587,38 +587,38 @@
 
 
   /* ---------- COMPARE PACKAGES ---------- */
-  .cmp{ margin-top:56px; }
-  .cmp h3{ font-size:34px; font-weight:500; letter-spacing:-0.045em; line-height:1.12; color:#fff; margin-bottom:22px; }
-  .cmp-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--glass-border,rgba(255,255,255,.16)); border-radius:28px; background:var(--glass,rgba(255,255,255,.04)); }
-  .cmp-table{ min-width:980px; }
-  .cmp-row{ display:grid; grid-template-columns:190px repeat(4,minmax(0,1fr)); border-top:1px solid var(--line-soft); }
+  .cmp{ margin:44px auto 0; max-width:1080px; }
+  .cmp h3{ font-size:26px; font-weight:500; letter-spacing:-0.045em; line-height:1.12; color:#fff; margin-bottom:16px; }
+  .cmp-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--glass-border,rgba(255,255,255,.16)); border-radius:22px; background:var(--glass,rgba(255,255,255,.04)); }
+  .cmp-table{ min-width:820px; }
+  .cmp-row{ display:grid; grid-template-columns:150px repeat(4,minmax(0,1fr)); border-top:1px solid var(--line-soft); }
   .cmp-row:first-child{ border-top:0; }
   .cmp-row.alt{ background:rgba(255,255,255,.035); }
-  .cmp-label{ padding:22px 24px; color:var(--slate); font-size:16px; letter-spacing:-0.01em; }
-  .cmp-cell{ padding:22px 24px; color:var(--ink-soft); font-size:16.5px; line-height:1.5; letter-spacing:-0.01em; border-left:1px solid var(--line-soft); text-align:center; display:flex; flex-direction:column; justify-content:center; gap:10px; }
+  .cmp-label{ padding:14px 18px; color:var(--slate); font-size:14px; letter-spacing:-0.01em; }
+  .cmp-cell{ padding:14px 18px; color:var(--ink-soft); font-size:14.5px; line-height:1.45; letter-spacing:-0.01em; border-left:1px solid var(--line-soft); text-align:center; display:flex; flex-direction:column; justify-content:center; gap:10px; }
   .cmp-cell.pick{ background:rgba(255,255,255,.055); }
-  .cmp-head .cmp-cell{ text-align:left; justify-content:flex-start; gap:8px; padding-top:28px; padding-bottom:28px; }
-  .cmp-price{ font-size:34px; font-weight:600; letter-spacing:-0.05em; line-height:1.1; color:#fff; }
-  .cmp-name{ font-size:26px; font-weight:600; letter-spacing:-0.04em; color:#d2d2d2; }
-  .cmp-kicker{ margin-top:10px; font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
-  .cmp-desc{ font-size:15.5px; line-height:1.55; color:var(--slate); }
-  .cmp-badge{ align-self:flex-start; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:5px 10px; border-radius:999px; background:#5ef2b0; color:#06210f; }
+  .cmp-head .cmp-cell{ text-align:left; justify-content:flex-start; gap:8px; padding-top:20px; padding-bottom:20px; }
+  .cmp-price{ font-size:26px; font-weight:600; letter-spacing:-0.05em; line-height:1.1; color:#fff; }
+  .cmp-name{ font-size:20px; font-weight:600; letter-spacing:-0.04em; color:#d2d2d2; }
+  .cmp-kicker{ margin-top:6px; font-size:11.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+  .cmp-desc{ font-size:13.5px; line-height:1.5; color:var(--slate); }
+  .cmp-badge{ align-self:flex-start; font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:4px 9px; border-radius:999px; background:#5ef2b0; color:#06210f; }
   .cmp-badge.star{ background:#f2cfd8; color:#2a1018; }
   .cmp-badge.none{ visibility:hidden; }
   .cmp-radio{ display:flex; align-items:center; gap:12px; text-align:left; justify-content:center; }
   .cmp-radio i{ flex:none; width:18px; height:18px; border-radius:50%; border:1.5px solid #bdbdbd; display:inline-block; position:relative; }
   .cmp-radio.on i::after{ content:""; position:absolute; inset:3px; border-radius:50%; background:#fff; }
   .cmp-radio em{ font-style:normal; color:var(--slate); font-size:14.5px; display:block; }
-  .cmp-total{ font-size:26px; font-weight:600; letter-spacing:-0.04em; color:#fff; }
-  .cmp-note{ margin-top:18px; text-align:center; font-size:14.5px; line-height:1.6; color:var(--slate); letter-spacing:-0.01em; }
-  .cmp .btn{ width:100%; justify-content:center; }
+  .cmp-total{ font-size:21px; font-weight:600; letter-spacing:-0.04em; color:#fff; }
+  .cmp-note{ margin-top:14px; text-align:center; font-size:13px; line-height:1.6; color:var(--slate); letter-spacing:-0.01em; }
+  .cmp .btn{ width:100%; justify-content:center; height:40px; padding:0 14px; font-size:14.5px; }
   .cmp-hint{ display:none; margin:-8px 0 14px; font-size:14px; color:var(--slate); }
   @media (max-width:1100px){
     .cmp-hint{ display:block; }
-    .cmp-label{ position:sticky; left:0; z-index:2; background:#0c0c0c; width:150px; padding:22px 16px; font-size:15px; }
+    .cmp-label{ position:sticky; left:0; z-index:2; background:#0c0c0c; width:120px; padding:14px 12px; font-size:13.5px; }
     .cmp-row.alt .cmp-label{ background:#151515; }
-    .cmp-row{ grid-template-columns:150px repeat(4,minmax(0,1fr)); }
-    .cmp-table{ min-width:940px; }
+    .cmp-row{ grid-template-columns:120px repeat(4,minmax(0,1fr)); }
+    .cmp-table{ min-width:780px; }
   }
   @media (max-width:640px){ .cmp h3{ font-size:28px; } .cmp-scroll{ border-radius:20px; } }
 
@@ -1500,17 +1500,15 @@
         <h3>Compare packages</h3>
         <p class="cmp-hint">Swipe sideways to compare all packages &rarr;</p>
         <div class="cmp-scroll"><div class="cmp-table">
-<div class="cmp-row cmp-head"><div class="cmp-label">Package</div><div class="cmp-cell"><span class="cmp-badge">100 items free</span><div class="cmp-price">$0</div><div class="cmp-name">Free Trial</div><div class="cmp-kicker">Sample batch (100 items)</div><div class="cmp-desc">Bounding boxes, polygons or text labels on your own data. See our accuracy before you pay.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$18</div><div class="cmp-name">Basic</div><div class="cmp-kicker">Small dataset (1,000 boxes)</div><div class="cmp-desc">Polygons: $0.04 each. Ideal for pilots and proof-of-concept models.</div></div><div class="cmp-cell pick"><span class="cmp-badge star">Most popular</span><div class="cmp-price">$150</div><div class="cmp-name">Standard</div><div class="cmp-kicker">Medium dataset (10,000 boxes)</div><div class="cmp-desc">Polygons: $0.04 each. Custom segmentation, text labeling and medium-sized AI dataset projects.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$1,200</div><div class="cmp-name">Premium</div><div class="cmp-kicker">Enterprise dataset (100,000 boxes)</div><div class="cmp-desc">Polygons: $0.035 each. Large-scale image segmentation and AI training datasets with custom requirements.</div></div></div>
+<div class="cmp-row cmp-head"><div class="cmp-label">Package</div><div class="cmp-cell"><span class="cmp-badge">100 items free</span><div class="cmp-price">$0</div><div class="cmp-name">Free Trial</div><div class="cmp-kicker">Sample batch (100 items)</div><div class="cmp-desc">Bounding boxes, polygons or text labels on your own data. See our accuracy before you pay.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$40</div><div class="cmp-name">Basic</div><div class="cmp-kicker">Small dataset (1,000 boxes)</div><div class="cmp-desc">$0.04 per box or polygon. Ideal for pilots and proof-of-concept models.</div></div><div class="cmp-cell pick"><span class="cmp-badge star">Most popular</span><div class="cmp-price">$400</div><div class="cmp-name">Standard</div><div class="cmp-kicker">Medium dataset (10,000 boxes)</div><div class="cmp-desc">$0.04 per box or polygon. Custom segmentation, text labeling and medium-sized AI dataset projects.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$4,000</div><div class="cmp-name">Premium</div><div class="cmp-kicker">Enterprise dataset (100,000 boxes)</div><div class="cmp-desc">$0.04 per box or polygon. Large-scale image segmentation and AI training datasets with custom requirements.</div></div></div>
 <div class="cmp-row alt"><div class="cmp-label">Items labeled</div><div class="cmp-cell">100</div><div class="cmp-cell">1,000</div><div class="cmp-cell pick">10,000</div><div class="cmp-cell">100,000</div></div>
-<div class="cmp-row"><div class="cmp-label">Price per box</div><div class="cmp-cell">Free</div><div class="cmp-cell">$0.018</div><div class="cmp-cell pick">$0.015</div><div class="cmp-cell">$0.012</div></div>
-<div class="cmp-row alt"><div class="cmp-label">Price per polygon</div><div class="cmp-cell">Free</div><div class="cmp-cell">$0.04</div><div class="cmp-cell pick">$0.04</div><div class="cmp-cell">$0.035</div></div>
 <div class="cmp-row"><div class="cmp-label">Revisions</div><div class="cmp-cell">1</div><div class="cmp-cell">2</div><div class="cmp-cell pick">Unlimited</div><div class="cmp-cell">Unlimited</div></div>
 <div class="cmp-row alt"><div class="cmp-label">Quality assurance</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell pick">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div></div>
 <div class="cmp-row"><div class="cmp-label">Accuracy guarantee</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell pick">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div></div>
-<div class="cmp-row alt"><div class="cmp-label">Delivery time</div><div class="cmp-cell">1 day</div><div class="cmp-cell">2 days</div><div class="cmp-cell pick"><div class="cmp-radio on"><i></i><span>3 days</span></div><div class="cmp-radio"><i></i><span>2 days<em>(+$40)</em></span></div></div><div class="cmp-cell"><div class="cmp-radio on"><i></i><span>5 days</span></div><div class="cmp-radio"><i></i><span>3 days<em>(+$250)</em></span></div></div></div>
-<div class="cmp-row"><div class="cmp-label">Total</div><div class="cmp-cell"><div class="cmp-total">$0</div><a href="#trial" class="btn btn-solid">Start Free Trial</a></div><div class="cmp-cell"><div class="cmp-total">$18</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell pick"><div class="cmp-total">$150</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$1,200</div><a href="#trial" class="btn btn-solid">Select</a></div></div>
+<div class="cmp-row alt"><div class="cmp-label">Delivery time</div><div class="cmp-cell">1 day</div><div class="cmp-cell">2 days</div><div class="cmp-cell pick">3 days</div><div class="cmp-cell">5 days</div></div>
+<div class="cmp-row"><div class="cmp-label">Total</div><div class="cmp-cell"><div class="cmp-total">$0</div><a href="#trial" class="btn btn-solid">Start Free Trial</a></div><div class="cmp-cell"><div class="cmp-total">$40</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell pick"><div class="cmp-total">$400</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$4,000</div><a href="#trial" class="btn btn-solid">Select</a></div></div>
         </div></div>
-        <p class="cmp-note">Rates shown are for standard bounding-box and polygon work. Typical published market rates run $0.02&ndash;$0.10 per bounding box. Video, text, complex schemas and custom volumes are quoted per project.</p>
+        <p class="cmp-note">Flat $0.04 per bounding box or polygon, with no hidden fees or rush surcharges. Typical published market rates run $0.02&ndash;$0.10 per bounding box. Video, text, complex schemas and custom volumes are quoted per project.</p>
       </div>
       <div class="pricing-foot">Need something different? Tell us your project and we quote it.</div>
     </div>
