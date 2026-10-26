@@ -587,11 +587,11 @@
 
 
   /* ---------- COMPARE PACKAGES ---------- */
-  .cmp{ margin:44px auto 0; max-width:1080px; }
+  .cmp{ margin:44px auto 0; max-width:1240px; }
   .cmp h3{ font-size:26px; font-weight:500; letter-spacing:-0.045em; line-height:1.12; color:#fff; margin-bottom:16px; }
   .cmp-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--glass-border,rgba(255,255,255,.16)); border-radius:22px; background:var(--glass,rgba(255,255,255,.04)); }
-  .cmp-table{ min-width:820px; }
-  .cmp-row{ display:grid; grid-template-columns:150px repeat(4,minmax(0,1fr)); border-top:1px solid var(--line-soft); }
+  .cmp-table{ min-width:1000px; }
+  .cmp-row{ display:grid; grid-template-columns:150px repeat(5,minmax(0,1fr)); border-top:1px solid var(--line-soft); }
   .cmp-row:first-child{ border-top:0; }
   .cmp-row.alt{ background:rgba(255,255,255,.035); }
   .cmp-label{ padding:14px 18px; color:var(--slate); font-size:14px; letter-spacing:-0.01em; }
@@ -617,8 +617,8 @@
     .cmp-hint{ display:block; }
     .cmp-label{ position:sticky; left:0; z-index:2; background:#0c0c0c; width:120px; padding:14px 12px; font-size:13.5px; }
     .cmp-row.alt .cmp-label{ background:#151515; }
-    .cmp-row{ grid-template-columns:120px repeat(4,minmax(0,1fr)); }
-    .cmp-table{ min-width:780px; }
+    .cmp-row{ grid-template-columns:120px repeat(5,minmax(0,1fr)); }
+    .cmp-table{ min-width:960px; }
   }
   @media (max-width:640px){ .cmp h3{ font-size:28px; } .cmp-scroll{ border-radius:20px; } }
 
@@ -1500,13 +1500,13 @@
         <h3>Compare packages</h3>
         <p class="cmp-hint">Swipe sideways to compare all packages &rarr;</p>
         <div class="cmp-scroll"><div class="cmp-table">
-<div class="cmp-row cmp-head"><div class="cmp-label">Package</div><div class="cmp-cell"><span class="cmp-badge">100 items free</span><div class="cmp-price">$0</div><div class="cmp-name">Free Trial</div><div class="cmp-kicker">Sample batch (100 items)</div><div class="cmp-desc">Bounding boxes, polygons or text labels on your own data. See our accuracy before you pay.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$50</div><div class="cmp-name">Basic</div><div class="cmp-kicker">Small dataset (1,000 boxes)</div><div class="cmp-desc">$0.05 per box or polygon. Ideal for pilots and proof-of-concept models.</div></div><div class="cmp-cell pick"><span class="cmp-badge star">Most popular</span><div class="cmp-price">$450</div><div class="cmp-name">Standard</div><div class="cmp-kicker">Medium dataset (10,000 boxes)</div><div class="cmp-desc">$0.045 per box or polygon. Custom segmentation, text labeling and medium-sized AI dataset projects.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$4,200</div><div class="cmp-name">Premium</div><div class="cmp-kicker">Enterprise dataset (100,000 boxes)</div><div class="cmp-desc">$0.042 per box or polygon. Large-scale image segmentation and AI training datasets with custom requirements.</div></div></div>
-<div class="cmp-row alt"><div class="cmp-label">Items labeled</div><div class="cmp-cell">100</div><div class="cmp-cell">1,000</div><div class="cmp-cell pick">10,000</div><div class="cmp-cell">100,000</div></div>
-<div class="cmp-row"><div class="cmp-label">Revisions</div><div class="cmp-cell">1</div><div class="cmp-cell">2</div><div class="cmp-cell pick">Unlimited</div><div class="cmp-cell">Unlimited</div></div>
-<div class="cmp-row alt"><div class="cmp-label">Quality assurance</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell pick">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div></div>
-<div class="cmp-row"><div class="cmp-label">Accuracy guarantee</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell pick">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div></div>
-<div class="cmp-row alt"><div class="cmp-label">Delivery time</div><div class="cmp-cell">1 day</div><div class="cmp-cell">2 days</div><div class="cmp-cell pick">3 days</div><div class="cmp-cell">5 days</div></div>
-<div class="cmp-row"><div class="cmp-label">Total</div><div class="cmp-cell"><div class="cmp-total">$0</div><a href="#trial" class="btn btn-solid">Start Free Trial</a></div><div class="cmp-cell"><div class="cmp-total">$50</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell pick"><div class="cmp-total">$450</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$4,200</div><a href="#trial" class="btn btn-solid">Select</a></div></div>
+<div class="cmp-row cmp-head"><div class="cmp-label">Package</div><div class="cmp-cell"><span class="cmp-badge">100 items free</span><div class="cmp-price">$0</div><div class="cmp-name">Free Trial</div><div class="cmp-kicker">Sample batch (100 items)</div><div class="cmp-desc">Bounding boxes, polygons or text labels on your own data. See our accuracy before you pay.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$50</div><div class="cmp-name">Basic</div><div class="cmp-kicker">Small dataset (1,000 boxes)</div><div class="cmp-desc">$0.05 per box or polygon. Ideal for pilots and proof-of-concept models.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$500</div><div class="cmp-name">Standard</div><div class="cmp-kicker">Medium dataset (10,000 boxes)</div><div class="cmp-desc">$0.05 per box or polygon. Custom segmentation, text labeling and medium-sized AI dataset projects.</div></div><div class="cmp-cell pick"><span class="cmp-badge star">Most popular</span><div class="cmp-price">$4,800</div><div class="cmp-name">Premium</div><div class="cmp-kicker">Large dataset (100,000 boxes)</div><div class="cmp-desc">$0.048 per box or polygon. Large-scale image segmentation and AI training datasets with custom requirements.</div></div><div class="cmp-cell"><span class="cmp-badge none">-</span><div class="cmp-price">$47,500</div><div class="cmp-name">Enterprise</div><div class="cmp-kicker">Enterprise dataset (1,000,000 boxes)</div><div class="cmp-desc">$0.0475 per box or polygon. Million-item pipelines with dedicated teams and custom requirements.</div></div></div>
+<div class="cmp-row alt"><div class="cmp-label">Items labeled</div><div class="cmp-cell">100</div><div class="cmp-cell">1,000</div><div class="cmp-cell">10,000</div><div class="cmp-cell pick">100,000</div><div class="cmp-cell">1,000,000</div></div>
+<div class="cmp-row"><div class="cmp-label">Revisions</div><div class="cmp-cell">1</div><div class="cmp-cell">2</div><div class="cmp-cell">Unlimited</div><div class="cmp-cell pick">Unlimited</div><div class="cmp-cell">Unlimited</div></div>
+<div class="cmp-row alt"><div class="cmp-label">Quality assurance</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div><div class="cmp-cell pick">Dual-layer QA</div><div class="cmp-cell">Dual-layer QA</div></div>
+<div class="cmp-row"><div class="cmp-label">Accuracy guarantee</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div><div class="cmp-cell pick">98%+ or free rework</div><div class="cmp-cell">98%+ or free rework</div></div>
+<div class="cmp-row alt"><div class="cmp-label">Delivery time</div><div class="cmp-cell">2 days</div><div class="cmp-cell">3 days</div><div class="cmp-cell">7 days</div><div class="cmp-cell pick">25 days</div><div class="cmp-cell"><a href="#trial" style="color:inherit;text-decoration:underline">Contact us</a></div></div>
+<div class="cmp-row"><div class="cmp-label">Total</div><div class="cmp-cell"><div class="cmp-total">$0</div><a href="#trial" class="btn btn-solid">Start Free Trial</a></div><div class="cmp-cell"><div class="cmp-total">$50</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$500</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell pick"><div class="cmp-total">$4,800</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$47,500</div><a href="#trial" class="btn btn-solid">Select</a></div></div>
         </div></div>
       <div class="pricing-foot">Need something different? Tell us your project and we quote it.</div>
     </div>
