@@ -1095,6 +1095,24 @@
   .rec{ animation:sTwinkle 1.2s ease-in-out infinite; }
   .social-li{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; margin-top:20px; border-radius:50%; background:#fff; color:#0a0a0a; font-size:18px; transition:transform .2s ease, background .2s ease; }
   .social-li:hover{ transform:translateY(-2px); background:#ffe566; }
+
+  /* ---------- SECURITY & PRIVACY (separate band) ---------- */
+  .sec-band{ background:#0b0b0b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:96px 0; position:relative; }
+  .sec-cols{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:start; }
+  .sec-card{ background:#141414; border:1.5px solid color-mix(in srgb, var(--sc) 40%, transparent); border-radius:22px; overflow:hidden; }
+  .sec-card-head{ display:flex; align-items:center; justify-content:space-between; padding:18px 26px; background:var(--sc); color:#111; }
+  .sec-card-head span{ font-size:22px; font-weight:700; letter-spacing:-0.025em; }
+  .sec-card-head b{ font-size:34px; font-weight:700; letter-spacing:-0.04em; opacity:.4; }
+  .sec-card-body{ padding:6px 26px 14px; }
+  .sec-item{ display:flex; gap:14px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,.12); }
+  .sec-item:last-child{ border-bottom:0; }
+  .sec-dot{ flex:none; width:11px; height:11px; margin-top:8px; border-radius:50%; background:var(--sc); }
+  .sec-item h4{ margin:0 0 6px; font-size:19px; font-weight:700; letter-spacing:-0.02em; color:#fff; line-height:1.25; }
+  .sec-item p{ margin:0; font-size:15.5px; line-height:1.55; color:#c9c9c9; letter-spacing:-0.01em; }
+  .sec-note{ display:flex; align-items:center; gap:12px; margin-top:28px; padding:18px 24px; border-radius:14px; background:#141414; border:1px solid rgba(255,255,255,.12); color:#d6d4ca; font-size:15.5px; }
+  .sec-note a{ color:#fff; text-decoration:underline; text-underline-offset:3px; }
+  .sec-note-dot{ flex:none; width:10px; height:10px; border-radius:50%; background:#c6f36b; }
+  @media (max-width:900px){ .sec-cols{ grid-template-columns:1fr; } .sec-band{ padding:64px 0; } }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1458,32 +1476,37 @@
   </section>
 
   <!-- SECURITY & PRIVACY -->
-  <section id="security">
+  <section id="security" class="sec-band">
     <div class="wrap">
       <div class="sys-tag"><span class="idx">[ 04 ]</span><span>Security</span></div>
       <div class="section-head">
-        <h2>Security and privacy, <em>from NDA to deletion</em></h2>
+        <h2>Security and Privacy, <em>from NDA to deletion</em></h2>
         <p>Your data stays yours. Every project is covered by an NDA, handled only by our in-house team, and deleted when the work is done.</p>
       </div>
-    </div>
-    <div class="wrap" style="padding:0;">
-      <div class="label-grid" style="grid-template-columns:repeat(3,1fr);">
-        <div class="label-cell">
-          <div class="tag-row"><span class="tag-mono">Before</span><span class="idx-mono">01</span></div>
-          <h4>Before you share</h4>
-          <ul><li><b>NDA before onboarding.</b> A Distinction Lab representative provides an NDA for you to sign before any data is shared.</li><li><b>In-house team only.</b> Your data is handled only by our own team. No crowdsourcing and no outside vendors.</li></ul>
+      <div class="sec-cols">
+        <div class="sec-card" style="--sc:#c6f36b">
+          <div class="sec-card-head"><span>Before you share</span><b>01</b></div>
+          <div class="sec-card-body">
+            <div class="sec-item"><span class="sec-dot"></span><div><h4>NDA before onboarding</h4><p>A Distinction Lab representative provides an NDA for you to sign before any data is shared.</p></div></div>
+            <div class="sec-item"><span class="sec-dot"></span><div><h4>In-house team only</h4><p>Your data is handled only by our own team. No crowdsourcing and no outside vendors.</p></div></div>
+          </div>
         </div>
-        <div class="label-cell">
-          <div class="tag-row"><span class="tag-mono">During</span><span class="idx-mono">02</span></div>
-          <h4>While we work</h4>
-          <ul><li><b>Stored internally.</b> Data is stored on our internal systems and stays within your project team only.</li><li><b>Restricted access.</b> Only named team members assigned to your project can open your data.</li><li><b>Encrypted, stream-only.</b> End-to-end encryption. Stream-only workspaces, so data is not copied to personal devices.</li></ul>
+        <div class="sec-card" style="--sc:#f4ee5a">
+          <div class="sec-card-head"><span>While we work</span><b>02</b></div>
+          <div class="sec-card-body">
+            <div class="sec-item"><span class="sec-dot"></span><div><h4>Stored internally</h4><p>Data is stored on our internal systems and stays within your project team only.</p></div></div>
+            <div class="sec-item"><span class="sec-dot"></span><div><h4>Restricted access</h4><p>Only named team members assigned to your project can open your data.</p></div></div>
+            <div class="sec-item"><span class="sec-dot"></span><div><h4>Encrypted, stream-only</h4><p>End-to-end encryption. Stream-only workspaces, so data is not copied to personal devices.</p></div></div>
+          </div>
         </div>
-        <div class="label-cell">
-          <div class="tag-row"><span class="tag-mono">After</span><span class="idx-mono">03</span></div>
-          <h4>After the project</h4>
-          <ul><li><b>Deleted after the project.</b> When the project is finished, we delete your data from our systems.</li></ul>
+        <div class="sec-card" style="--sc:#ee6b2f">
+          <div class="sec-card-head"><span>After the project</span><b>03</b></div>
+          <div class="sec-card-body">
+            <div class="sec-item"><span class="sec-dot"></span><div><h4>Deleted after the project</h4><p>When the project is finished, we delete your data from our systems.</p></div></div>
+          </div>
         </div>
       </div>
+      <div class="sec-note"><span class="sec-note-dot"></span>Questions about how we handle your data? Email <a href="mailto:contact@distinctionlab.info">contact@distinctionlab.info</a> and we will send our NDA before you share anything.</div>
     </div>
   </section>
 
