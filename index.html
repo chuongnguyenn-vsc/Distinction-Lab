@@ -1114,6 +1114,24 @@
   .sec-note a{ color:#fff; text-decoration:underline; text-underline-offset:3px; }
   .sec-note-dot{ flex:none; width:10px; height:10px; border-radius:50%; background:#ffc857; }
   @media (max-width:900px){ .sec-cols{ grid-template-columns:1fr; } .sec-band{ padding:64px 0; } }
+
+  /* ---------- WHY US: type-only stat cards ---------- */
+  #why .why-card.wc2{ display:flex; flex-direction:column; padding:30px 26px 32px; overflow:hidden; min-height:420px;
+    background:linear-gradient(180deg,color-mix(in srgb,var(--c) 11%,#0d0d0d) 0%,#0a0a0a 62%); border-color:color-mix(in srgb,var(--c) 26%,transparent); }
+  #why .wc2::before{ content:""; position:absolute; left:0; right:0; top:0; height:3px; background:var(--c); }
+  #why .wc2::after{ content:""; position:absolute; width:260px; height:260px; right:-110px; top:-110px; border-radius:50%;
+    background:radial-gradient(circle,color-mix(in srgb,var(--c) 30%,transparent),transparent 68%); pointer-events:none; transition:opacity .3s; opacity:.7; }
+  #why .wc2:hover::after{ opacity:1; }
+  #why .wc2-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:34px; position:relative; z-index:1; }
+  #why .wc2 .num{ margin:0; font-size:12px; padding:7px 12px; border-radius:999px; letter-spacing:.1em; box-shadow:none; }
+  #why .wc2-idx{ font-family:"JetBrains Mono",ui-monospace,monospace; font-size:13px; color:color-mix(in srgb,var(--c) 70%,#fff); opacity:.7; }
+  #why .wc2 h3.hook{ display:flex; flex-direction:column; margin:0 0 22px; position:relative; z-index:1; font-size:inherit; line-height:1; }
+  #why .wc2-kick{ font-size:clamp(16px,1.3vw,20px); font-weight:500; color:#d9d9d9; letter-spacing:-.01em; margin-bottom:10px; }
+  #why .wc2-stat{ font-size:clamp(48px,4.5vw,76px); font-weight:700; letter-spacing:-.05em; padding-right:.08em; line-height:.95; white-space:nowrap; color:var(--c);
+    background:linear-gradient(180deg,color-mix(in srgb,var(--c) 55%,#fff) 0%,var(--c) 70%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; padding-bottom:.06em; }
+  #why .wc2-sub{ margin-top:12px; font-size:clamp(22px,1.9vw,30px); font-weight:600; letter-spacing:-.03em; line-height:1.15; color:#fff; }
+  #why .wc2 p.hook-p{ margin-top:auto; padding-top:20px; border-top:1px solid color-mix(in srgb,var(--c) 28%,transparent); color:#cfcfcf; font-size:17px; line-height:1.5; position:relative; z-index:1; }
+  @media (max-width:1240px){ #why .why-card.wc2{ min-height:360px; } #why .wc2-stat{ font-size:clamp(56px,9vw,84px); } }
 </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1230,34 +1248,29 @@
     </div>
     <div class="wrap why-wide" style="padding:0;">
       <div class="why-grid">
-        <div class="why-card c-gold">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><rect class="sb" style="--i:0" x="40" y="30" width="26" height="70" rx="6" opacity=".35"/><rect class="sb" style="--i:1" x="82" y="50" width="26" height="50" rx="6" opacity=".55"/><rect class="sb" style="--i:2" x="124" y="68" width="26" height="32" rx="6" opacity=".8"/><rect class="sb" style="--i:3" x="166" y="82" width="26" height="18" rx="6"/></g><path class="sdraw" d="M30 34 L100 54 L150 70 L200 84" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g class="scoin"><circle cx="205" cy="26" r="14" fill="currentColor"/><text x="205" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#111">$</text></g></svg></div>
-          <div class="num mono">OPTIMISED OPERATIONAL COST</div>
-          <h3 class="hook">Cut costs by up to <em>70%</em></h3>
+        <div class="why-card wc2 c-gold">
+          <div class="wc2-top"><div class="num mono">Optimised operational cost</div><span class="wc2-idx">01</span></div>
+          <h3 class="hook"><span class="wc2-kick">Cut costs by up to</span><span class="wc2-stat">70%</span></h3>
           <p class="hook-p">Project-based pricing. No hiring. No overhead.</p>
         </div>
-        <div class="why-card c-mint">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="120" cy="60" r="46" opacity=".35"/><circle cx="120" cy="60" r="30" opacity=".6"/><circle cx="120" cy="60" r="14"/><circle class="sring" cx="120" cy="60" r="14"/></g><circle cx="120" cy="60" r="6" fill="currentColor"/><g stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M120 6V22M120 98V114M66 60H82M158 60H174"/></g><path class="sdraw2" d="M168 28l9 9 17-20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="num mono">ACCURACY</div>
-          <h3 class="hook"><em>&gt;98%</em> accurate. Guaranteed.</h3>
+        <div class="why-card wc2 c-mint">
+          <div class="wc2-top"><div class="num mono">Accuracy</div><span class="wc2-idx">02</span></div>
+          <h3 class="hook"><span class="wc2-kick">Always above</span><span class="wc2-stat">&gt;98%</span><span class="wc2-sub">accurate. Guaranteed.</span></h3>
           <p class="hook-p">Below standard? We redo it free.</p>
         </div>
-        <div class="why-card c-sky">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="3" opacity=".5"/><circle class="sdash" cx="120" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 9" stroke-linecap="round"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M120 22v8M120 90v8M82 60h8M150 60h8" opacity=".6"/><path d="M120 60V40"/><path class="shand" d="M120 60V30"/></g><circle cx="120" cy="60" r="4.5" fill="currentColor"/><g class="sfloat"><rect x="166" y="12" width="52" height="24" rx="12" fill="currentColor"/><text x="192" y="29" text-anchor="middle" font-size="13" font-weight="700" fill="#111">+15h</text></g></svg></div>
-          <div class="num mono">SPEED</div>
-          <h3 class="hook">Datasets done in <em>2-5 days</em></h3>
+        <div class="why-card wc2 c-sky">
+          <div class="wc2-top"><div class="num mono">Speed</div><span class="wc2-idx">03</span></div>
+          <h3 class="hook"><span class="wc2-kick">Datasets done in</span><span class="wc2-stat">2–5</span><span class="wc2-sub">days</span></h3>
           <p class="hook-p">Parallel teams. Faster labels. Your models train sooner.</p>
         </div>
-        <div class="why-card c-rose">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><path class="spulse" d="M120 12L168 28V62C168 88 146 104 120 110C94 104 72 88 72 62V28Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path class="sdraw2" d="M98 60l16 16 30-34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><g fill="currentColor"><circle class="sdot" style="--i:0" cx="34" cy="40" r="3.5"/><circle class="sdot" style="--i:1" cx="206" cy="48" r="3.5"/><circle class="sdot" style="--i:2" cx="40" cy="86" r="3.5"/><circle class="sdot" style="--i:3" cx="200" cy="92" r="3.5"/></g><g class="sfloat"><rect x="152" y="6" width="68" height="22" rx="11" fill="currentColor"/><text x="186" y="21" text-anchor="middle" font-size="12" font-weight="700" fill="#111">100 free</text></g></svg></div>
-          <div class="num mono">RISK</div>
-          <h3 class="hook">Try <em>100 items</em> free</h3>
+        <div class="why-card wc2 c-rose">
+          <div class="wc2-top"><div class="num mono">Risk</div><span class="wc2-idx">04</span></div>
+          <h3 class="hook"><span class="wc2-kick">Try</span><span class="wc2-stat">100</span><span class="wc2-sub">items free</span></h3>
           <p class="hook-p">See our quality before you pay a cent.</p>
         </div>
-        <div class="why-card c-sky">
-          <div class="scene" aria-hidden="true"><svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2.5"><circle class="sring2" style="--i:0" cx="120" cy="64" r="30"/><circle class="sring2" style="--i:1" cx="120" cy="64" r="30"/></g><path d="M20 64H84M156 64H220" stroke="currentColor" stroke-width="3" stroke-dasharray="3 8" stroke-linecap="round" class="sstream"/><path d="M104 56V46a16 16 0 0 1 32 0V56" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="92" y="54" width="56" height="44" rx="9" fill="currentColor"/><circle cx="120" cy="72" r="6" fill="#111"/><rect x="117" y="75" width="6" height="12" rx="3" fill="#111"/></svg></div>
-          <div class="num mono">PRIVACY</div>
-          <h3 class="hook">Your data stays <em>yours</em></h3>
+        <div class="why-card wc2 c-sky">
+          <div class="wc2-top"><div class="num mono">Privacy</div><span class="wc2-idx">05</span></div>
+          <h3 class="hook"><span class="wc2-kick">Your data stays</span><span class="wc2-stat">yours</span></h3>
           <p class="hook-p">End-to-end encryption. Stream-only workspaces.</p>
         </div>
       </div>
