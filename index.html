@@ -1115,24 +1115,23 @@
   .sec-note-dot{ flex:none; width:10px; height:10px; border-radius:50%; background:#ffc857; }
   @media (max-width:900px){ .sec-cols{ grid-template-columns:1fr; } .sec-band{ padding:64px 0; } }
 
-  /* ---------- WHY US: type-only stat cards ---------- */
-  #why .why-card.wc2{ display:flex; flex-direction:column; padding:30px 26px 32px; overflow:hidden; min-height:420px;
-    background:linear-gradient(180deg,color-mix(in srgb,var(--c) 11%,#0d0d0d) 0%,#0a0a0a 62%); border-color:color-mix(in srgb,var(--c) 26%,transparent); }
-  #why .wc2::before{ content:""; position:absolute; left:0; right:0; top:0; height:3px; background:var(--c); }
-  #why .wc2::after{ content:""; position:absolute; width:260px; height:260px; right:-110px; top:-110px; border-radius:50%;
-    background:radial-gradient(circle,color-mix(in srgb,var(--c) 30%,transparent),transparent 68%); pointer-events:none; transition:opacity .3s; opacity:.7; }
-  #why .wc2:hover::after{ opacity:1; }
-  #why .wc2-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:34px; position:relative; z-index:1; }
-  #why .wc2 .num{ margin:0; font-size:12px; padding:7px 12px; border-radius:999px; letter-spacing:.1em; box-shadow:none; }
-  #why .wc2-idx{ font-family:"JetBrains Mono",ui-monospace,monospace; font-size:13px; color:color-mix(in srgb,var(--c) 70%,#fff); opacity:.7; }
-  #why .wc2 h3.hook{ display:flex; flex-direction:column; margin:0 0 22px; position:relative; z-index:1; font-size:inherit; line-height:1; }
-  #why .wc2-kick{ font-size:clamp(16px,1.3vw,20px); font-weight:500; color:#d9d9d9; letter-spacing:-.01em; margin-bottom:10px; }
-  #why .wc2-stat{ font-size:clamp(48px,4.5vw,76px); font-weight:700; letter-spacing:-.05em; padding-right:.08em; line-height:.95; white-space:nowrap; color:var(--c);
-    background:linear-gradient(180deg,color-mix(in srgb,var(--c) 55%,#fff) 0%,var(--c) 70%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; padding-bottom:.06em; }
-  #why .wc2-sub{ margin-top:12px; font-size:clamp(22px,1.9vw,30px); font-weight:600; letter-spacing:-.03em; line-height:1.15; color:#fff; }
-  #why .wc2 p.hook-p{ margin-top:auto; padding-top:20px; border-top:1px solid color-mix(in srgb,var(--c) 28%,transparent); color:#cfcfcf; font-size:17px; line-height:1.5; position:relative; z-index:1; }
-  @media (max-width:1240px){ #why .why-card.wc2{ min-height:360px; } #why .wc2-stat{ font-size:clamp(56px,9vw,84px); } }
-</style>
+  /* ---------- WHY US: glowing feature cards ---------- */
+  .fc-grid{ display:flex; flex-wrap:wrap; justify-content:center; gap:40px 12px; width:100%; max-width:1000px; margin:0 auto; padding:24px 0 8px; }
+  .fc{ position:relative; display:flex; flex-direction:column; width:100%; max-width:260px; margin:0 auto; opacity:0; transform:translateY(30px);
+    transition:opacity .8s ease-out var(--d,0s), transform .8s ease-out var(--d,0s); }
+  .fc.in{ opacity:1; transform:none; }
+  .fc-glow{ position:absolute; top:0; left:0; width:100%; height:260px; opacity:.6; border-radius:40px; pointer-events:none; background:var(--g); filter:blur(45px); transition:opacity .4s ease; }
+  .fc:hover .fc-glow{ opacity:.8; }
+  .fc-body{ position:relative; z-index:10; align-self:stretch; height:260px; border-radius:40px; overflow:hidden; border:8px solid transparent;
+    background:linear-gradient(#1A1A1C,#1A1A1C) padding-box, var(--g) border-box; }
+  .fc-in{ width:100%; height:100%; padding:28px; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box; }
+  .fc-ic{ color:rgba(255,255,255,.9); line-height:0; }
+  .fc-t{ color:#fff; font-weight:500; font-size:20px; margin:0 0 12px; letter-spacing:-.025em; line-height:1.2; }
+  .fc-d{ color:#9ca3af; font-size:14px; line-height:1.6; font-weight:400; margin:0; letter-spacing:0; }
+  .fc-d::selection, .fc-t::selection{ background:rgba(255,255,255,.2); }
+  @media (min-width:768px){ .fc{ max-width:300px; } .fc-glow, .fc-body{ height:300px; } }
+  @media (prefers-reduced-motion:reduce){ .fc{ opacity:1; transform:none; transition:none; } }
+  </style>
 </head>
 <body style="background:#000;color:#fff">
 
@@ -1247,31 +1246,51 @@
       </div>
     </div>
     <div class="wrap why-wide" style="padding:0;">
-      <div class="why-grid">
-        <div class="why-card wc2 c-gold">
-          <div class="wc2-top"><div class="num mono">Optimised operational cost</div><span class="wc2-idx">01</span></div>
-          <h3 class="hook"><span class="wc2-kick">Cut costs by up to</span><span class="wc2-stat">70%</span></h3>
-          <p class="hook-p">Project-based pricing. No hiring. No overhead.</p>
+      <div class="fc-grid">
+        <div class="fc" style="--g:linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%);--d:0.1s">
+          <div class="fc-glow" aria-hidden="true"></div>
+          <div class="fc-body">
+            <div class="fc-in">
+              <div class="fc-ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg></div>
+              <div><h3 class="fc-t">Optimised operational cost</h3><p class="fc-d">Cut costs by up to 70%. Project-based pricing, no hiring, no overhead.</p></div>
+            </div>
+          </div>
         </div>
-        <div class="why-card wc2 c-mint">
-          <div class="wc2-top"><div class="num mono">Accuracy</div><span class="wc2-idx">02</span></div>
-          <h3 class="hook"><span class="wc2-kick">Always above</span><span class="wc2-stat">&gt;98%</span><span class="wc2-sub">accurate. Guaranteed.</span></h3>
-          <p class="hook-p">Below standard? We redo it free.</p>
+        <div class="fc" style="--g:linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%);--d:0.2s">
+          <div class="fc-glow" aria-hidden="true"></div>
+          <div class="fc-body">
+            <div class="fc-in">
+              <div class="fc-ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
+              <div><h3 class="fc-t">Quality guaranteed</h3><p class="fc-d">98%+ accuracy. Below your quality standard? We redo it free.</p></div>
+            </div>
+          </div>
         </div>
-        <div class="why-card wc2 c-sky">
-          <div class="wc2-top"><div class="num mono">Speed</div><span class="wc2-idx">03</span></div>
-          <h3 class="hook"><span class="wc2-kick">Datasets done in</span><span class="wc2-stat">2–5</span><span class="wc2-sub">days</span></h3>
-          <p class="hook-p">Parallel teams. Faster labels. Your models train sooner.</p>
+        <div class="fc" style="--g:linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%);--d:0.3s">
+          <div class="fc-glow" aria-hidden="true"></div>
+          <div class="fc-body">
+            <div class="fc-in">
+              <div class="fc-ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              <div><h3 class="fc-t">Fast delivery</h3><p class="fc-d">Datasets done in 2–5 days. Parallel teams, so your models train sooner.</p></div>
+            </div>
+          </div>
         </div>
-        <div class="why-card wc2 c-rose">
-          <div class="wc2-top"><div class="num mono">Risk</div><span class="wc2-idx">04</span></div>
-          <h3 class="hook"><span class="wc2-kick">Try</span><span class="wc2-stat">100</span><span class="wc2-sub">items free</span></h3>
-          <p class="hook-p">See our quality before you pay a cent.</p>
+        <div class="fc" style="--g:linear-gradient(137deg, #FFFFFF 0%, #86EFAC 45%, #10B981 100%);--d:0.4s">
+          <div class="fc-glow" aria-hidden="true"></div>
+          <div class="fc-body">
+            <div class="fc-in">
+              <div class="fc-ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div><h3 class="fc-t">Privacy</h3><p class="fc-d">Your data stays yours. End-to-end encryption and stream-only workspaces.</p></div>
+            </div>
+          </div>
         </div>
-        <div class="why-card wc2 c-sky">
-          <div class="wc2-top"><div class="num mono">Privacy</div><span class="wc2-idx">05</span></div>
-          <h3 class="hook"><span class="wc2-kick">Your data stays</span><span class="wc2-stat">yours</span></h3>
-          <p class="hook-p">End-to-end encryption. Stream-only workspaces.</p>
+        <div class="fc" style="--g:linear-gradient(137deg, #FFF7AD 0%, #FDE047 45%, #F59E0B 100%);--d:0.5s">
+          <div class="fc-glow" aria-hidden="true"></div>
+          <div class="fc-body">
+            <div class="fc-in">
+              <div class="fc-ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+              <div><h3 class="fc-t">Risk</h3><p class="fc-d">Try 100 items free. See our quality before you pay a cent.</p></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1902,5 +1921,11 @@
   })();
 </script>
 
+<script>
+(function(){var c=document.querySelectorAll('.fc');if(!c.length)return;
+if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return;}
+var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target);}})},{threshold:.15});
+c.forEach(function(e){o.observe(e)});})();
+</script>
 </body>
 </html>
