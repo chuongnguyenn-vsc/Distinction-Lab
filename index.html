@@ -1120,16 +1120,16 @@
   .fc{ position:relative; display:flex; flex-direction:column; width:100%; max-width:260px; margin:0 auto; opacity:0; transform:translateY(30px);
     transition:opacity .8s ease-out var(--d,0s), transform .8s ease-out var(--d,0s); }
   .fc.in{ opacity:1; transform:none; }
-  .fc-glow{ position:absolute; top:0; left:0; width:100%; height:260px; opacity:.6; border-radius:40px; pointer-events:none; background:var(--g); filter:blur(45px); transition:opacity .4s ease; }
+  .fc-glow{ position:absolute; top:0; left:0; width:100%; height:100%; min-height:260px; opacity:.6; border-radius:40px; pointer-events:none; background:var(--g); filter:blur(45px); transition:opacity .4s ease; }
   .fc:hover .fc-glow{ opacity:.8; }
-  .fc-body{ position:relative; z-index:10; align-self:stretch; height:260px; border-radius:40px; overflow:hidden; border:8px solid transparent;
+  .fc-body{ position:relative; z-index:10; align-self:stretch; min-height:260px; border-radius:40px; overflow:hidden; border:8px solid transparent;
     background:linear-gradient(#1A1A1C,#1A1A1C) padding-box, var(--g) border-box; }
   .fc-in{ width:100%; height:100%; padding:28px; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box; }
   .fc-ic{ color:rgba(255,255,255,.9); line-height:0; }
-  .fc-t{ color:#fff; font-weight:500; font-size:20px; margin:0 0 12px; letter-spacing:-.025em; line-height:1.2; }
+  .fc-t{ font-weight:700; font-size:26px; margin:0 0 12px; letter-spacing:-.035em; line-height:1.12; padding-bottom:.06em; color:transparent; background:var(--g); -webkit-background-clip:text; background-clip:text; filter:drop-shadow(0 0 14px rgba(255,255,255,.12)); }
   .fc-d{ color:#9ca3af; font-size:14px; line-height:1.6; font-weight:400; margin:0; letter-spacing:0; }
   .fc-d::selection, .fc-t::selection{ background:rgba(255,255,255,.2); }
-  @media (min-width:768px){ .fc{ max-width:300px; } .fc-glow, .fc-body{ height:300px; } }
+  @media (min-width:768px){ .fc{ max-width:300px; } .fc-glow, .fc-body{ min-height:300px; } .fc-t{ font-size:31px; } }
   @media (prefers-reduced-motion:reduce){ .fc{ opacity:1; transform:none; transition:none; } }
   </style>
 </head>
