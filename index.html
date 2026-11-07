@@ -1163,42 +1163,6 @@
   }
   @media (min-width:1280px){ .hx-h1{ font-size:128px; } }
   @media (prefers-reduced-motion:reduce){ .shiny{ animation:none; background-position:50% center; } .hx-h1 > span{ opacity:1; animation:none; } }
-  
-  /* ---------- SITE-WIDE ALIGNMENT WITH THE LANDING HERO ---------- */
-  :root{ --hx:#64CEFB; }
-  /* headings: Inter, medium, tight tracking, white */
-  .section-head h2, .cta-banner h2, .feedback-box h3, .about-inner .lede, .vm-cell p.big,
-  #why .section-head h2{ font-family:Inter,system-ui,sans-serif !important; font-weight:500 !important; letter-spacing:-.045em !important; line-height:1 !important; color:#fff; }
-  .section-head h2, #why .section-head h2, .cta-banner h2{ font-size:clamp(38px,5.2vw,76px) !important; }
-  .about-inner .lede{ font-size:clamp(30px,3.6vw,52px) !important; line-height:1.02 !important; }
-  .pricing-col h3, .pricing-col .price-row .amt, .strip-item b{ font-family:Inter,system-ui,sans-serif !important; font-weight:600 !important; letter-spacing:-.035em !important; }
-  /* accent words: same shiny sweep as the hero */
-  .section-head h2 em, .cta-banner h2 em, .about-inner .lede em, .vm-cell p.big em{
-    font-style:normal; font-family:inherit; font-weight:inherit; display:inline;
-    color:transparent !important; -webkit-text-fill-color:transparent !important;
-    background-image:linear-gradient(100deg,#64CEFB 0%,#64CEFB 35%,#ffffff 50%,#64CEFB 65%,#64CEFB 100%) !important;
-    background-size:200% auto; background-position:150% center; -webkit-background-clip:text; background-clip:text;
-    animation:hxShine 3s linear infinite; }
-  @media (prefers-reduced-motion:reduce){ .section-head h2 em, .cta-banner h2 em, .about-inner .lede em, .vm-cell p.big em{ animation:none; background-position:50% center; } }
-  /* body copy: white/80 */
-  .section-head p, .about-inner .body p, .about-inner .body p strong, .vm-cell p, .p-row .p-body p{ color:rgba(255,255,255,.8) !important; }
-  .section-head p{ font-size:17px; }
-  /* tags + eyebrows: one accent */
-  .sys-tag{ color:var(--hx) !important; }
-  .sys-tag .idx{ color:#fff; box-shadow:none; border:1px solid #374151; background:transparent; }
-  .footer-col h5, .pricing-col.highlight h3, .pricing-col.highlight .price-row .amt, .pricing-col.highlight .mark{ color:var(--hx) !important; }
-  .testimonial-card .t-role{ color:var(--hx) !important; }
-  .social-li:hover{ background:var(--hx) !important; }
-  .sec-note-dot{ background:var(--hx) !important; }
-  /* single accent across Services + Security + pricing badges */
-  .label-cell, .label-cell:nth-child(n), .p-row, .p-row:nth-child(n), .label-cell.label-tile{ --c:var(--hx) !important; }
-  .sec-card{ --sc:var(--hx) !important; }
-  .cmp-badge, .cmp-badge.star{ background:var(--hx); color:#04202c; }
-  .pricing-col.highlight::before{ background:linear-gradient(90deg,#64CEFB,#fff 50%,#64CEFB) !important; }
-  /* cards: same soft glass, gray-700 border, big radius */
-  .label-cell, .pricing-col, .testimonial-card, .sec-card, .faq-item{ border-color:#374151; }
-  /* retire the decorative # % * glyphs */
-  section::after, .cta-banner::after{ content:none !important; }
   </style>
 </head>
 <body style="background:#000;color:#fff">
