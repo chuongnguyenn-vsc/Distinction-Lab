@@ -1131,6 +1131,38 @@
   .fc-d::selection, .fc-t::selection{ background:rgba(255,255,255,.2); }
   @media (min-width:768px){ .fc{ max-width:300px; } .fc-glow, .fc-body{ min-height:300px; } .fc-t{ font-size:31px; } }
   @media (prefers-reduced-motion:reduce){ .fc{ opacity:1; transform:none; transition:none; } }
+  
+  /* ---------- HERO (video, shiny headline) ---------- */
+  .lp{ align-items:stretch; padding:0 clamp(16px,3vw,32px); }
+  .hx{ position:relative; z-index:10; flex:1; display:flex; flex-direction:column; width:100%; max-width:1280px; margin:0 auto; padding:24px 0 48px; font-family:Inter,system-ui,sans-serif; }
+  .hx-top{ display:flex; flex-direction:column; gap:16px; margin-top:clamp(24px,4vh,48px); }
+  .hx-p{ color:rgba(255,255,255,.8); font-size:14px; line-height:1.5; max-width:30em; margin:0; text-shadow:0 1px 10px rgba(0,0,0,.6); }
+  .hx-center{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding-top:24px; }
+  .hx-eyebrow{ color:rgba(255,255,255,.8); font-size:12px; text-transform:uppercase; letter-spacing:-.025em; margin:0 0 16px; }
+  .hx-h1{ font-family:Inter,system-ui,sans-serif; font-weight:500; color:#fff; font-size:clamp(34px,9.6vw,48px); line-height:.85; letter-spacing:-.05em; margin:0 0 32px; text-shadow:0 2px 24px rgba(0,0,0,.35); }
+  .hx-h1 > span{ display:block; opacity:0; animation:hxUp .9s cubic-bezier(.22,1,.36,1) forwards; }
+  .hx-l1{ animation-delay:.25s !important; }
+  .hx-l2{ animation-delay:.38s !important; padding:.08em 0 .1em; }
+  @keyframes hxUp{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:none;} }
+  /* ShinyText: base #64CEFB, shine #fff, 3s sweep, 100deg spread */
+  .shiny{ display:inline-block; color:transparent; -webkit-text-fill-color:transparent;
+    background-image:linear-gradient(100deg,#64CEFB 0%,#64CEFB 35%,#ffffff 50%,#64CEFB 65%,#64CEFB 100%);
+    background-size:200% auto; background-position:150% center; -webkit-background-clip:text; background-clip:text;
+    animation:hxShine 3s linear infinite; text-shadow:none; filter:drop-shadow(0 2px 18px rgba(0,0,0,.35)); }
+  @keyframes hxShine{ from{ background-position:150% center; } to{ background-position:-50% center; } }
+  .hx-cta{ display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; border-radius:999px; padding:12px 24px; font-size:16px; font-weight:500; text-decoration:none; transition:background-color .3s ease, transform .3s ease; }
+  .hx-cta:hover{ background:#111827; }
+  .hx-arrow{ transition:transform .3s ease; flex:none; }
+  .hx-cta:hover .hx-arrow{ transform:translateX(4px); }
+  @media (min-width:640px){ .hx-h1{ font-size:60px; } .hx-eyebrow{ font-size:14px; } }
+  @media (min-width:768px){ .hx-h1{ font-size:72px; } .hx-cta{ padding:16px 32px; } }
+  @media (min-width:1024px){
+    .hx-top{ flex-direction:row; justify-content:space-between; align-items:flex-start; gap:48px; }
+    .hx-p{ font-size:16px; } .hx-p-r{ text-align:right; max-width:22em; }
+    .hx-h1{ font-size:96px; }
+  }
+  @media (min-width:1280px){ .hx-h1{ font-size:128px; } }
+  @media (prefers-reduced-motion:reduce){ .shiny{ animation:none; background-position:50% center; } .hx-h1 > span{ opacity:1; animation:none; } }
   </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1164,29 +1196,22 @@
   <div class="lp" id="top">
     <div class="bg" aria-hidden="true">
       <video class="bg-video" autoplay muted loop playsinline>
-        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4" type="video/mp4">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_105406_16f4600d-7a92-4292-b96e-b19156c7830a.mp4" type="video/mp4">
       </video>
     </div>
 
     <div class="lp-spacer" aria-hidden="true"></div>
 
-    <div class="lp-hero">
-      <div class="trust anim" style="--d:.05s">
-        <span class="t-av"><i class="fa-solid fa-tag"></i></span>
-        <span class="t-av"><i class="fa-solid fa-shield-halved"></i></span>
-        <span class="t-av"><i class="fa-solid fa-check"></i></span>
-        <span class="t-pill">Free 100-item calibration trial</span>
+    <div class="hx">
+      <div class="hx-top">
+        <p class="hx-p anim" style="--d:.05s">We run the data annotation and labeling behind AI as a dedicated team, so AI builders can focus on the model.</p>
+        <p class="hx-p hx-p-r anim" style="--d:.12s">98%+ accuracy. Delivered in 2–5 days.</p>
       </div>
-      <h1 class="lp-h1"><span>Your AI Data Team,</span><span>On Autopilot</span></h1>
-      <p class="lp-sub anim" style="--d:.28s">Distinction Lab handles your end-to-end labeling, annotation, and RLHF alignment. Your team can focus on shipping models.</p>
-      <a href="#trial" class="lp-cta anim pulse" style="--d:.4s">Get Started</a>
-    </div>
-
-    <div class="lp-stats">
-      <div class="lp-stat anim" style="--d:.5s"><div class="ico">&lt;</div><div class="val" data-target="5" data-prefix="&le; " data-suffix=" days" data-dec="0">0</div><div class="lbl">Delivery Time</div></div>
-      <div class="lp-stat anim" style="--d:.58s"><div class="ico">%</div><div class="val" data-target="98" data-prefix="&gt;" data-suffix="%" data-dec="0">0</div><div class="lbl">Precision SLA</div></div>
-      <div class="lp-stat anim" style="--d:.66s"><div class="ico">*</div><div class="val" data-target="100" data-prefix="" data-suffix=" items" data-dec="0">0</div><div class="lbl">Free Calibration Trial</div></div>
-      <div class="lp-stat anim" style="--d:.74s"><div class="ico">#</div><div class="val" data-target="70" data-prefix="Up to " data-suffix="%" data-dec="0">0</div><div class="lbl">Lower Cost vs In-House</div></div>
+      <div class="hx-center">
+        <p class="hx-eyebrow anim" style="--d:.18s">Free 100-item calibration trial</p>
+        <h1 class="hx-h1"><span class="hx-l1">Your AI Data Team,</span><span class="hx-l2"><span class="shiny" data-text="On Autopilot.">On Autopilot.</span></span></h1>
+        <a href="#trial" class="hx-cta anim" style="--d:.45s"><span>Start Free Trial</span><svg class="hx-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
     </div>
   </div>
 
@@ -1873,7 +1898,7 @@
 
   // Landing stats count-up
   (function(){
-    var vals=[].slice.call(document.querySelectorAll('.lp-stat .val'));
+    var vals=[].slice.call(document.querySelectorAll('.lp-stat .val')); if(!vals.length) return;
     function fmt(v,el){ return (el.dataset.prefix||'')+v.toFixed(+el.dataset.dec||0)+(el.dataset.suffix||''); }
     vals.forEach(function(el){ el.textContent=fmt(+el.dataset.target,el); el.textContent=fmt(0,el); });
     function run(el,i){
