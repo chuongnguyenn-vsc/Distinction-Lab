@@ -1132,8 +1132,12 @@
   @media (min-width:768px){ .fc{ max-width:300px; } .fc-glow, .fc-body{ min-height:300px; } .fc-t{ font-size:31px; } }
   @media (prefers-reduced-motion:reduce){ .fc{ opacity:1; transform:none; transition:none; } }
   
-  .cmp-promo{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin:16px auto 0; padding:12px 20px; width:fit-content; max-width:100%; border:1px solid rgba(94,242,176,.4); background:rgba(94,242,176,.08); border-radius:999px; font-size:15px; color:#e8f7ef; }
-  .cmp-promo b{ background:#5ef2b0; color:#06210f; padding:4px 12px; border-radius:999px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; }
+  .cmp-promo{ position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; margin:28px auto 0; padding:34px clamp(20px,5vw,64px) 36px; width:fit-content; max-width:100%; border-radius:32px; overflow:hidden;
+    border:1px solid rgba(94,242,176,.45); background:radial-gradient(ellipse at 50% 0%,rgba(94,242,176,.22),rgba(94,242,176,0) 70%),#0b0f0d; box-shadow:0 0 60px rgba(94,242,176,.18); }
+  .cmp-promo-tag{ background:#5ef2b0; color:#06210f; padding:6px 16px; border-radius:999px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; }
+  .cmp-promo-h{ font-size:clamp(30px,5vw,60px); font-weight:700; letter-spacing:-.04em; line-height:1.05; color:#fff; }
+  .cmp-promo-h em{ font-style:normal; background:linear-gradient(100deg,#5ef2b0,#c8ffe6 50%,#5ef2b0); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+  .cmp-promo-s{ margin:0; font-size:clamp(15px,1.6vw,19px); color:rgba(255,255,255,.8); }
   </style>
 </head>
 <body style="background:#000;color:#fff">
@@ -1600,7 +1604,7 @@
 <div class="cmp-row"><div class="cmp-label">Total</div><div class="cmp-cell"><div class="cmp-total">$0</div><a href="#trial" class="btn btn-solid">Start Free Trial</a></div><div class="cmp-cell"><div class="cmp-total">$50</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$450</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell pick"><div class="cmp-total">$3,000</div><a href="#trial" class="btn btn-solid">Select</a></div><div class="cmp-cell"><div class="cmp-total">$12,500</div><a href="#trial" class="btn btn-solid">Select</a></div></div>
         </div></div>
         <p class="cmp-note">Prices shown are for bounding box annotation only and are for your reference. Other annotation types are quoted per project.</p>
-        <div class="cmp-promo"><b>$500 off</b> <span>Straight $500 discount on any project over $3,000.</span></div>
+        <div class="cmp-promo"><span class="cmp-promo-tag">First-time users</span><div class="cmp-promo-h">Straight <em>$500 cash discount</em></div><p class="cmp-promo-s">For first-time users on any project value over $3,000.</p></div>
       <div class="pricing-foot">Need something different? Tell us your project and we quote it.</div>
     </div>
   </section>
