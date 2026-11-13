@@ -13,6 +13,12 @@
 ## Pricing (bounding box annotation, for reference)
 Free trial 100 items $0; Basic 1,000 boxes $25; Standard 10,000 boxes $200; Premium 100,000 boxes $1,850; Enterprise 500,000 boxes $9,250. Other annotation types are quoted per project.
 
+## Pages
+- Bounding box annotation: https://www.distinctionlab.site/bounding-box-annotation/
+- RLHF data services: https://www.distinctionlab.site/rlhf-data-services/
+- Model evaluation: https://www.distinctionlab.site/model-evaluation-services/
+- Pricing: https://www.distinctionlab.site/data-annotation-pricing/
+
 ## Links
 - Website: https://www.distinctionlab.site/
 - Contact: contact@distinctionlab.info
