@@ -1,0 +1,19 @@
+# Distinction Lab
+
+> Distinction Lab is a managed data annotation and labeling company. We run the data work behind AI as a dedicated team, so AI builders can focus on the model.
+
+## What we do
+- Data annotation and labeling (images, video, text, audio)
+- RLHF and LLM data
+- Model evaluation
+- Data curation
+- Quality assurance (dual-layer review, 98%+ accuracy, free rework)
+- Managed data teams
+
+## Pricing (bounding box annotation, for reference)
+Free trial 100 items $0; Basic 1,000 boxes $25; Standard 10,000 boxes $200; Premium 100,000 boxes $1,850; Enterprise 500,000 boxes $9,250. Other annotation types are quoted per project.
+
+## Links
+- Website: https://www.distinctionlab.site/
+- Contact: contact@distinctionlab.info
+- LinkedIn: https://www.linkedin.com/company/distinction-lab/
