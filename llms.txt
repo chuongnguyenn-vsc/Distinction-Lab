@@ -17,6 +17,9 @@ Free trial 100 items $0; Basic 1,000 boxes $25; Standard 10,000 boxes $200; Prem
 - Bounding box annotation: https://www.distinctionlab.site/bounding-box-annotation/
 - RLHF data services: https://www.distinctionlab.site/rlhf-data-services/
 - Model evaluation: https://www.distinctionlab.site/model-evaluation-services/
+- Data curation and preparation: https://www.distinctionlab.site/data-curation-preparation/
+- Data quality assurance: https://www.distinctionlab.site/data-quality-assurance/
+- Managed data annotation team: https://www.distinctionlab.site/managed-data-annotation-team/
 - Pricing: https://www.distinctionlab.site/data-annotation-pricing/
 
 ## Links
